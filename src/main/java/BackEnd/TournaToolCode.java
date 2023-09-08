@@ -6,8 +6,8 @@ package BackEnd;
 
 /**
  *
- * @author saienn
+ * @author LATITUDE 5480
  */
-public class Methods {
+public class TournaToolCode {
     
 }
