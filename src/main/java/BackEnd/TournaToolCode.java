@@ -4,10 +4,26 @@
  */
 package BackEnd;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
 /**
  *
  * @author LATITUDE 5480
  */
 public class TournaToolCode {
+    
+    public static void writeParticipants(String participantName) throws FileNotFoundException, IOException{
+
+        File participantsFile = new File ("src\\main\\java\\BackEnd\\participants.txt");
+        Scanner participantsSC = new Scanner(participantsFile);
+        FileWriter participantsFW = new FileWriter("src\\main\\java\\BackEnd\\participants.txt");
+        
+        participantsFW.write(participantName);
+
+    }
     
 }
