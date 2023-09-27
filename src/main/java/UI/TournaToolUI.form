@@ -249,44 +249,41 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="title_TxtFld" alignment="0" pref="200" max="32767" attributes="0"/>
+                                  <Component id="title_txt" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                                      <Component id="displayImage_txt" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="title_TxtFld" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                                          <Component id="title_txt" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                              <Component id="displayImage_txt" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" attributes="0">
-                                              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="displayImage_button" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                                                  <Component id="displayImage_img" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <Component id="title_txt2" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jSpinner1" min="-2" pref="36" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                              <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jButton4" min="-2" pref="22" max="-2" attributes="0"/>
-                                              <EmptySpace min="0" pref="3" max="32767" attributes="0"/>
-                                          </Group>
-                                          <Component id="jScrollPane1" max="32767" attributes="0"/>
+                                          <Component id="displayImage_button" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                                          <Component id="displayImage_img" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Group type="102" alignment="1" attributes="0">
+                                  <Component id="scoreMetric_txt" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="scoreMetric_panel" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       <Component id="continue_button" min="-2" max="-2" attributes="0"/>
                                   </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="participants_txt" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="participants_spinner" min="-2" pref="36" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                      <Component id="maxParticipants_txt" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                      <Component id="participants_txtField" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="participants_button" pref="40" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="participants_scrollPane" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -299,12 +296,12 @@
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="title_txt" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                                      <Component id="title_txt2" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                                      <Component id="jSpinner1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel1" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                                      <Component id="jTextField1" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Component id="participants_txt" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Component id="participants_spinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="maxParticipants_txt" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                                      <Component id="participants_txtField" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="jButton4" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="participants_button" min="-2" pref="20" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -316,9 +313,12 @@
                                       <Component id="displayImage_img" min="-2" pref="100" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="displayImage_button" min="-2" pref="18" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="190" max="32767" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="scoreMetric_txt" min="-2" pref="20" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="scoreMetric_panel" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="jScrollPane1" max="32767" attributes="0"/>
+                                  <Component id="participants_scrollPane" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="continue_button" min="-2" max="-2" attributes="0"/>
@@ -427,7 +427,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="continue_buttonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="title_txt2">
+                    <Component class="javax.swing.JLabel" name="participants_txt">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Verdana" size="10" style="1"/>
@@ -435,7 +435,7 @@
                         <Property name="text" type="java.lang.String" value="Participants:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JSpinner" name="jSpinner1">
+                    <Component class="javax.swing.JSpinner" name="participants_spinner">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Verdana" size="11" style="0"/>
@@ -452,7 +452,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel1">
+                    <Component class="javax.swing.JLabel" name="maxParticipants_txt">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Verdana" size="10" style="2"/>
@@ -463,14 +463,14 @@
                         <Property name="text" type="java.lang.String" value="Max: 32"/>
                       </Properties>
                     </Component>
-                    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                    <Container class="javax.swing.JScrollPane" name="participants_scrollPane">
                       <AuxValues>
                         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                       </AuxValues>
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JList" name="jList1">
+                        <Component class="javax.swing.JList" name="participants_list">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -488,7 +488,7 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JTextField" name="jTextField1">
+                    <Component class="javax.swing.JTextField" name="participants_txtField">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="0" green="0" red="0" type="rgb"/>
@@ -509,16 +509,16 @@
                         </Property>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="participants_txtFieldActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton4">
+                    <Component class="javax.swing.JButton" name="participants_button">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="0" green="0" red="0" type="rgb"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Verdana" size="10" style="0"/>
+                          <Font name="Verdana" size="10" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="OK"/>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -529,7 +529,151 @@
                           </Border>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="participants_buttonMouseClicked"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="participants_buttonActionPerformed"/>
+                      </Events>
                     </Component>
+                    <Component class="javax.swing.JLabel" name="scoreMetric_txt">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Verdana" size="10" style="1"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Score metric:"/>
+                      </Properties>
+                    </Component>
+                    <Container class="javax.swing.JPanel" name="scoreMetric_panel">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="0" green="0" red="0" type="rgb"/>
+                        </Property>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder>
+                              <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
+                            </LineBorder>
+                          </Border>
+                        </Property>
+                      </Properties>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="points_choice" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="time_choice" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="winORlose_choice" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rating_choice" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="points_choice" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="time_choice" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="winORlose_choice" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="rating_choice" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="58" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JRadioButton" name="points_choice">
+                          <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="0" green="0" red="0" type="rgb"/>
+                            </Property>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Verdana" size="9" style="0"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="Points"/>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
+                                </LineBorder>
+                              </Border>
+                            </Property>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="points_choiceActionPerformed"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JRadioButton" name="time_choice">
+                          <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="0" green="0" red="0" type="rgb"/>
+                            </Property>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Verdana" size="9" style="0"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="Time"/>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
+                                </LineBorder>
+                              </Border>
+                            </Property>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="time_choiceActionPerformed"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JRadioButton" name="winORlose_choice">
+                          <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="0" green="0" red="0" type="rgb"/>
+                            </Property>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Verdana" size="9" style="0"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="Win/Lose"/>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
+                                </LineBorder>
+                              </Border>
+                            </Property>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="winORlose_choiceActionPerformed"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JRadioButton" name="rating_choice">
+                          <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="0" green="0" red="0" type="rgb"/>
+                            </Property>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Verdana" size="9" style="0"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="Rating"/>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
+                                </LineBorder>
+                              </Border>
+                            </Property>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rating_choiceActionPerformed"/>
+                          </Events>
+                        </Component>
+                      </SubComponents>
+                    </Container>
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="knockout_panel">
@@ -549,7 +693,7 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="knockout_ScrollPanel" alignment="0" pref="618" max="32767" attributes="0"/>
+                          <Component id="knockout_ScrollPanel" alignment="0" pref="633" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
@@ -823,9 +967,9 @@
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Component id="R1participant31" min="-2" pref="70" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="R1points31" min="-2" pref="15" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="5" max="32767" attributes="0"/>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Component id="R1participant30" min="-2" pref="70" max="-2" attributes="0"/>
@@ -1017,7 +1161,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Adnaan"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant1">
@@ -1028,7 +1172,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Blake"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant2">
@@ -1039,7 +1183,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Cally"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant3">
@@ -1047,7 +1191,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Darren"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant4">
@@ -1058,7 +1202,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Eugene"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant5">
@@ -1066,7 +1210,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Freya"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant6">
@@ -1077,7 +1221,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Gerald"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant7">
@@ -1085,7 +1229,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Harry"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant8">
@@ -1093,7 +1237,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="India"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant9">
@@ -1104,7 +1248,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="James"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant10">
@@ -1115,7 +1259,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Kara"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant11">
@@ -1123,7 +1267,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Lauren"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant12">
@@ -1131,7 +1275,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Mckaden"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant13">
@@ -1142,7 +1286,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Noon"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant14">
@@ -1153,7 +1297,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Oreo"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant15">
@@ -1161,7 +1305,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Petra"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant16">
@@ -1172,7 +1316,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Quarren"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant17">
@@ -1180,7 +1324,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Ryan"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant18">
@@ -1188,7 +1332,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Saien"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant19">
@@ -1199,7 +1343,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Tariq"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant20">
@@ -1207,7 +1351,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Uki"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant21">
@@ -1218,7 +1362,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Verdana"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant22">
@@ -1226,7 +1370,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Wanda"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant23">
@@ -1237,7 +1381,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Xander"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant24">
@@ -1245,7 +1389,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Yurav"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant25">
@@ -1256,7 +1400,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Zandile"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant26">
@@ -1264,7 +1408,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Adrian"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant27">
@@ -1275,7 +1419,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Brian"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant28">
@@ -1283,7 +1427,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Cathy"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant29">
@@ -1294,7 +1438,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="David"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant30">
@@ -1305,7 +1449,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Eurik"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1participant31">
@@ -1313,43 +1457,43 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Fiona"/>
+                                    <Property name="text" type="java.lang.String" value="null"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points0">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="3"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points1">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points2">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="1"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points3">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="4"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points4">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points5">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points6">
@@ -1361,37 +1505,37 @@
                                 <Component class="javax.swing.JLabel" name="R1points7">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="3"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points8">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points9">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="1"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points10">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points11">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="3"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points12">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="1"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points13">
@@ -1403,31 +1547,31 @@
                                 <Component class="javax.swing.JLabel" name="R1points14">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points15">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="3"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points16">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="1"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points17">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points18">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points19">
@@ -1439,31 +1583,31 @@
                                 <Component class="javax.swing.JLabel" name="R1points20">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="3"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points21">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points22">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="4"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points23">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points24">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="1"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points25">
@@ -1475,37 +1619,37 @@
                                 <Component class="javax.swing.JLabel" name="R1points26">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="5"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points27">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points28">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points29">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="1"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points30">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="1"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R1points31">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="5"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                               </SubComponents>
@@ -1528,7 +1672,7 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="R2participant0" min="-2" pref="70" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="R2points0" min="-2" pref="15" max="-2" attributes="0"/>
+                                          <Component id="R2points0" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Component id="R2participant1" max="32767" attributes="0"/>
@@ -1701,7 +1845,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Adnaan"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2participant1">
@@ -1712,7 +1856,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Darren"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2participant2">
@@ -1720,7 +1864,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Freya"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2participant3">
@@ -1731,7 +1875,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Harry"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2participant4">
@@ -1742,7 +1886,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="India"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2participant5">
@@ -1750,7 +1894,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Lauren"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2participant6">
@@ -1758,7 +1902,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Mckaden"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2participant7">
@@ -1769,7 +1913,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Petra"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2participant8">
@@ -1780,7 +1924,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Ryan"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2participant9">
@@ -1788,7 +1932,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Fiona"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2participant10">
@@ -1796,7 +1940,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Cathy"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2participant11">
@@ -1807,7 +1951,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Adrian"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2participant12">
@@ -1815,7 +1959,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Yurav"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2participant13">
@@ -1823,7 +1967,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Wanda"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2participant14">
@@ -1834,7 +1978,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Uki"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2participant15">
@@ -1842,103 +1986,118 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Saien"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2points0">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="3"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2points1">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="1"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                    <Property name="toolTipText" type="java.lang.String" value=""/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2points2">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                    <Property name="toolTipText" type="java.lang.String" value=""/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2points3">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
                                     <Property name="text" type="java.lang.String" value="0"/>
+                                    <Property name="toolTipText" type="java.lang.String" value=""/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2points4">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                    <Property name="toolTipText" type="java.lang.String" value=""/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2points5">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="4"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                    <Property name="toolTipText" type="java.lang.String" value=""/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2points6">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="3"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                    <Property name="toolTipText" type="java.lang.String" value=""/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2points7">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="1"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                    <Property name="toolTipText" type="java.lang.String" value=""/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2points8">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="1"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                    <Property name="toolTipText" type="java.lang.String" value=""/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2points9">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="4"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                    <Property name="toolTipText" type="java.lang.String" value=""/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2points10">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="1"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                    <Property name="toolTipText" type="java.lang.String" value=""/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2points11">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="3"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                    <Property name="toolTipText" type="java.lang.String" value=""/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2points12">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                    <Property name="toolTipText" type="java.lang.String" value=""/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2points13">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                    <Property name="toolTipText" type="java.lang.String" value=""/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2points14">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="3"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                    <Property name="toolTipText" type="java.lang.String" value=""/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R2points15">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="1"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                    <Property name="toolTipText" type="java.lang.String" value=""/>
                                   </Properties>
                                 </Component>
                               </SubComponents>
@@ -2059,13 +2218,13 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Adnaan"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R3points0">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R3participant1">
@@ -2073,13 +2232,13 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Freya"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R3points1">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="3"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R3participant2">
@@ -2090,13 +2249,13 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Lauren"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R3points2">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="1"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R3participant3">
@@ -2104,13 +2263,13 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Mckaden"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R3points3">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R3participant4">
@@ -2118,13 +2277,13 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Saien"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R3points4">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="3"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R3participant5">
@@ -2135,13 +2294,13 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Wanda"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R3points5">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R3participant6">
@@ -2152,13 +2311,13 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Yurav"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R3points6">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="1"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R3participant7">
@@ -2166,13 +2325,13 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Cathy"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R3points7">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="3"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                               </SubComponents>
@@ -2273,13 +2432,13 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Verdana" size="10" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Freya"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R4points0">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R4participant1">
@@ -2290,13 +2449,13 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="0" green="33" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Mckaden"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R4points1">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="1"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R4participant2">
@@ -2307,13 +2466,13 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="0" green="33" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Saien"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R4points2">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R4participant3">
@@ -2324,13 +2483,13 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Cathy"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R4points3">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="3"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                               </SubComponents>
@@ -2389,13 +2548,13 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="99" green="99" red="99" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Freya"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R5points0">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="1"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R5participant1">
@@ -2406,13 +2565,13 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="0" green="cc" red="ff" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Cathy"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="R5points1">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="4"/>
-                                    <Property name="text" type="java.lang.String" value="2"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
                                   </Properties>
                                 </Component>
                               </SubComponents>
@@ -2476,7 +2635,7 @@
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="0" green="cc" red="ff" type="rgb"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Cathy"/>
+                                    <Property name="text" type="java.lang.String" value="TBC"/>
                                   </Properties>
                                 </Component>
                               </SubComponents>
@@ -2524,7 +2683,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="696" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="711" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -2551,7 +2710,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="700" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="715" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -2601,7 +2760,7 @@
                               <Component id="contact1_txt" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="181" max="32767" attributes="0"/>
+                      <EmptySpace pref="196" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
