@@ -1,0 +1,65 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package BackEnd;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+/**
+ *
+ * @author LATITUDE 5480
+ */
+public class ParticipantManager {
+    
+    public static String tournament = "";
+    public static String participantRound = "0";
+    public static String participantPos = "0";
+    public static String name = "uhuh";
+    public static String score = "0";
+    
+    public static void addParticipant(String participantName) throws FileNotFoundException, IOException{
+
+        File participantsFile = new File("src\\main\\resources\\participants.txt");
+        
+        FileWriter participantsFW = new FileWriter("src\\main\\resources\\participants.txt",true);
+        participantsFW.write("\n"+participantName);
+        participantsFW.close();
+        
+    } 
+    
+    public static String getParticipantName(String round, String pos) throws FileNotFoundException{
+
+        
+        File participantsFile = new File("src\\main\\resources\\participants.txt");
+        Scanner participantsSC = new Scanner(participantsFile).useDelimiter("#");
+
+        if (participantsSC.hasNext()){
+            
+            tournament = participantsSC.next();
+            
+            if (participantsSC.next().equals(round)){
+                participantRound = round;
+                if (participantsSC.next().equals(pos)){
+                    participantPos = pos;
+                    name = participantsSC.next();
+                    score = participantsSC.next();
+                } else {
+                    participantsSC.next();
+                }
+            } else {
+                participantsSC.next();
+                participantsSC.next();
+                participantsSC.next();
+            } 
+        }
+        
+        participantsSC.close();
+        return name;
+        
+    }    
+}

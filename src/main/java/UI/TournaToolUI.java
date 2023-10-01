@@ -4,8 +4,12 @@
  */
 package UI;
 
-import javax.swing.table.DefaultTableModel;
-import BackEnd.TournaToolCode;
+import BackEnd.ParticipantManager;
+import java.awt.Color;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -13,272 +17,32 @@ import BackEnd.TournaToolCode;
  */
 public class TournaToolUI extends javax.swing.JFrame {
 
+    private void resetColors(){
+        Color bold = new Color(222,222,222);
+        
+        title_txt.setForeground(bold);
+    }
     /**
      * Creates new form TournaTool
      */
-    public TournaToolUI() {
+    public TournaToolUI() throws FileNotFoundException {
+        
         initComponents();
+        resetColors();
         
-        //Round Robin table
+        setLocationRelativeTo(null);
         
-        String [] columns = new String[8];
-        columns[0] = "Contestants";
-        columns[1] = "Stat 1";
-        columns[2] = "Stat 2";
-        columns[3] = "Stat 3";
-        columns[4] = "Stat 4";
-        columns[5] = "Stat 5";
-        columns[6] = "Stat 6";
-        columns[7] = "Stat 7";
+        updateBracket();
         
-        int num_rows = 8;
-        int num_cols = 30;
-        
-        String[][] stats = new String[num_rows][num_cols];
-        
-        stats[0][0] = "50";
-        stats[0][1] = "50";
-        stats[0][2] = "50";
-        stats[0][3] = "50";
-        stats[0][4] = "50";
-        stats[0][5] = "50";
-        stats[0][6] = "50";
-        stats[0][7] = "50";
-        stats[0][8] = "50";
-        stats[0][9] = "50";
-        stats[0][10] = "50";
-        stats[0][11] = "50";
-        stats[0][12] = "50";
-        stats[0][13] = "50";
-        stats[0][14] = "50";
-        stats[0][15] = "50";
-        stats[0][16] = "50";
-        stats[0][17] = "50";
-        stats[0][18] = "50";
-        stats[0][19] = "50";
-        stats[0][20] = "50";
-        stats[0][21] = "50";
-        stats[0][22] = "50";
-        stats[0][23] = "50";
-        stats[0][24] = "50";
-        stats[0][25] = "50";
-        stats[0][26] = "50";
-        stats[0][27] = "50";
-        stats[0][28] = "50";
-        stats[0][29] = "50";
-        stats[1][1] = "50";
-        stats[1][2] = "50";
-        stats[1][3] = "50";
-        stats[1][4] = "50";
-        stats[1][5] = "50";
-        stats[1][6] = "50";
-        stats[1][7] = "50";
-        stats[1][8] = "50";
-        stats[1][9] = "50";
-        stats[1][10] = "50";
-        stats[1][11] = "50";
-        stats[1][12] = "50";
-        stats[1][13] = "50";
-        stats[1][14] = "50";
-        stats[1][15] = "50";
-        stats[1][16] = "50";
-        stats[1][17] = "50";
-        stats[1][18] = "50";
-        stats[1][19] = "50";
-        stats[1][20] = "50";
-        stats[1][21] = "50";
-        stats[1][22] = "50";
-        stats[1][23] = "50";
-        stats[1][24] = "50";
-        stats[1][25] = "50";
-        stats[1][26] = "50";
-        stats[1][27] = "50";
-        stats[1][28] = "50";
-        stats[1][29] = "50";
-        stats[2][0] = "50";
-        stats[2][1] = "50";
-        stats[2][2] = "50";
-        stats[2][3] = "50";
-        stats[2][4] = "50";
-        stats[2][5] = "50";
-        stats[2][6] = "50";
-        stats[2][7] = "50";
-        stats[2][8] = "50";
-        stats[2][9] = "50";
-        stats[2][10] = "50";
-        stats[2][11] = "50";
-        stats[2][12] = "50";
-        stats[2][13] = "50";
-        stats[2][14] = "50";
-        stats[2][15] = "50";
-        stats[2][16] = "50";
-        stats[2][17] = "50";
-        stats[2][18] = "50";
-        stats[2][19] = "50";
-        stats[2][20] = "50";
-        stats[2][21] = "50";
-        stats[2][22] = "50";
-        stats[2][23] = "50";
-        stats[2][24] = "50";
-        stats[2][25] = "50";
-        stats[2][26] = "50";
-        stats[2][27] = "50";
-        stats[2][28] = "50";
-        stats[2][29] = "50";
-        stats[3][0] = "50";
-        stats[3][1] = "50";
-        stats[3][2] = "50";
-        stats[3][3] = "50";
-        stats[3][4] = "50";
-        stats[3][5] = "50";
-        stats[3][6] = "50";
-        stats[3][7] = "50";
-        stats[3][8] = "50";
-        stats[3][9] = "50";
-        stats[3][10] = "50";
-        stats[3][11] = "50";
-        stats[3][12] = "50";
-        stats[3][13] = "50";
-        stats[3][14] = "50";
-        stats[3][15] = "50";
-        stats[3][16] = "50";
-        stats[3][17] = "50";
-        stats[3][18] = "50";
-        stats[3][19] = "50";
-        stats[3][20] = "50";
-        stats[3][21] = "50";
-        stats[3][22] = "50";
-        stats[3][23] = "50";
-        stats[3][24] = "50";
-        stats[3][25] = "50";
-        stats[3][26] = "50";
-        stats[3][27] = "50";
-        stats[3][28] = "50";
-        stats[3][29] = "50";
-        stats[4][1] = "50";
-        stats[4][2] = "50";
-        stats[4][3] = "50";
-        stats[4][4] = "50";
-        stats[4][5] = "50";
-        stats[4][6] = "50";
-        stats[4][7] = "50";
-        stats[4][8] = "50";
-        stats[4][9] = "50";
-        stats[4][10] = "50";
-        stats[4][11] = "50";
-        stats[4][12] = "50";
-        stats[4][13] = "50";
-        stats[4][14] = "50";
-        stats[4][15] = "50";
-        stats[4][16] = "50";
-        stats[4][17] = "50";
-        stats[4][18] = "50";
-        stats[4][19] = "50";
-        stats[4][20] = "50";
-        stats[4][21] = "50";
-        stats[4][22] = "50";
-        stats[4][23] = "50";
-        stats[4][24] = "50";
-        stats[4][25] = "50";
-        stats[4][26] = "50";
-        stats[4][27] = "50";
-        stats[4][28] = "50";
-        stats[4][29] = "50";
-        stats[5][0] = "50";
-        stats[5][1] = "50";
-        stats[5][2] = "50";
-        stats[5][3] = "50";
-        stats[5][4] = "50";
-        stats[5][5] = "50";
-        stats[5][6] = "50";
-        stats[5][7] = "50";
-        stats[5][8] = "50";
-        stats[5][9] = "50";
-        stats[5][10] = "50";
-        stats[5][1] = "50";
-        stats[5][12] = "50";
-        stats[5][13] = "50";
-        stats[5][14] = "50";
-        stats[5][15] = "50";
-        stats[5][16] = "50";
-        stats[5][17] = "50";
-        stats[5][18] = "50";
-        stats[5][19] = "50";
-        stats[5][20] = "50";
-        stats[5][21] = "50";
-        stats[5][22] = "50";
-        stats[5][23] = "50";
-        stats[5][24] = "50";
-        stats[5][25] = "50";
-        stats[5][26] = "50";
-        stats[5][27] = "50";
-        stats[5][28] = "50";
-        stats[5][29] = "50";
-        stats[6][0] = "50";
-        stats[6][1] = "50";
-        stats[6][2] = "50";
-        stats[6][3] = "50";
-        stats[6][4] = "50";
-        stats[6][5] = "50";
-        stats[6][6] = "50";
-        stats[6][7] = "50";
-        stats[6][8] = "50";
-        stats[6][9] = "50";
-        stats[6][10] = "50";
-        stats[6][11] = "50";
-        stats[6][12] = "50";
-        stats[6][13] = "50";
-        stats[6][14] = "50";
-        stats[6][15] = "50";
-        stats[6][16] = "50";
-        stats[6][17] = "50";
-        stats[6][18] = "50";
-        stats[6][19] = "50";
-        stats[6][20] = "50";
-        stats[6][21] = "50";
-        stats[6][22] = "50";
-        stats[6][23] = "50";
-        stats[6][24] = "50";
-        stats[6][25] = "50";
-        stats[6][26] = "50";
-        stats[6][27] = "50";
-        stats[6][28] = "50";
-        stats[6][29] = "50";
-        stats[7][0] = "50";
-        stats[7][1] = "50";
-        stats[7][2] = "50";
-        stats[7][3] = "50";
-        stats[7][4] = "50";
-        stats[7][5] = "50";
-        stats[7][6] = "50";
-        stats[7][7] = "50";
-        stats[7][8] = "50";
-        stats[7][9] = "50";
-        stats[7][10] = "50";
-        stats[7][11] = "50";
-        stats[7][12] = "50";
-        stats[7][13] = "50";
-        stats[7][14] = "50";
-        stats[7][15] = "50";
-        stats[7][16] = "50";
-        stats[7][17] = "50";
-        stats[7][18] = "50";
-        stats[7][19] = "50";
-        stats[7][20] = "50";
-        stats[7][21] = "50";
-        stats[7][22] = "50";
-        stats[7][23] = "50";
-        stats[7][24] = "50";
-        stats[7][25] = "50";
-        stats[7][26] = "50";
-        stats[7][27] = "50";
-        stats[7][28] = "50";
-        stats[7][29] = "50";
-        
-        
-        DefaultTableModel roundRobin_model = new DefaultTableModel(stats, columns);
-        jTable1.setModel(roundRobin_model);
-        
+    }
+    
+    public void updateBracket() throws FileNotFoundException{
+        //ParticipantManager.getParticipantName(round, pos);
+        //ParticipantManager.getParticipantScore(round, pos);
+        R4participant0.setText(ParticipantManager.getParticipantName("1","1"));
+        R4participant1.setText(ParticipantManager.getParticipantName("1","2"));
+        R4participant2.setText(ParticipantManager.getParticipantName("1","3"));
+        R4participant3.setText(ParticipantManager.getParticipantName("1","4"));
     }
 
     /**
@@ -317,8 +81,6 @@ public class TournaToolUI extends javax.swing.JFrame {
         participants_txt = new javax.swing.JLabel();
         participants_spinner = new javax.swing.JSpinner();
         maxParticipants_txt = new javax.swing.JLabel();
-        participants_scrollPane = new javax.swing.JScrollPane();
-        participants_list = new javax.swing.JList<>();
         participants_txtField = new javax.swing.JTextField();
         participants_button = new javax.swing.JButton();
         scoreMetric_txt = new javax.swing.JLabel();
@@ -327,6 +89,8 @@ public class TournaToolUI extends javax.swing.JFrame {
         time_choice = new javax.swing.JRadioButton();
         winORlose_choice = new javax.swing.JRadioButton();
         rating_choice = new javax.swing.JRadioButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        participants_txtArea = new javax.swing.JTextArea();
         knockout_panel = new javax.swing.JPanel();
         knockout_ScrollPanel = new javax.swing.JScrollPane();
         knockoutTournament_panel = new javax.swing.JPanel();
@@ -602,10 +366,6 @@ public class TournaToolUI extends javax.swing.JFrame {
         maxParticipants_txt.setForeground(new java.awt.Color(102, 102, 102));
         maxParticipants_txt.setText("Max: 32");
 
-        participants_list.setBackground(new java.awt.Color(0, 0, 0));
-        participants_list.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
-        participants_scrollPane.setViewportView(participants_list);
-
         participants_txtField.setBackground(new java.awt.Color(0, 0, 0));
         participants_txtField.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         participants_txtField.setForeground(new java.awt.Color(102, 102, 102));
@@ -705,6 +465,12 @@ public class TournaToolUI extends javax.swing.JFrame {
                 .addContainerGap(58, Short.MAX_VALUE))
         );
 
+        participants_txtArea.setBackground(new java.awt.Color(0, 0, 0));
+        participants_txtArea.setColumns(20);
+        participants_txtArea.setRows(5);
+        participants_txtArea.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
+        jScrollPane1.setViewportView(participants_txtArea);
+
         javax.swing.GroupLayout basicInfo_panelLayout = new javax.swing.GroupLayout(basicInfo_panel);
         basicInfo_panel.setLayout(basicInfo_panelLayout);
         basicInfo_panelLayout.setHorizontalGroup(
@@ -739,7 +505,7 @@ public class TournaToolUI extends javax.swing.JFrame {
                         .addComponent(participants_txtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(participants_button, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE))
-                    .addComponent(participants_scrollPane))
+                    .addComponent(jScrollPane1))
                 .addContainerGap())
         );
         basicInfo_panelLayout.setVerticalGroup(
@@ -747,12 +513,12 @@ public class TournaToolUI extends javax.swing.JFrame {
             .addGroup(basicInfo_panelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(basicInfo_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(participants_txtField, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(basicInfo_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(title_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(participants_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(participants_spinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(maxParticipants_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(participants_txtField, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(maxParticipants_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(participants_button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(basicInfo_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -768,7 +534,7 @@ public class TournaToolUI extends javax.swing.JFrame {
                         .addComponent(scoreMetric_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(scoreMetric_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(participants_scrollPane))
+                    .addComponent(jScrollPane1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(continue_button)
                 .addContainerGap())
@@ -2000,7 +1766,7 @@ public class TournaToolUI extends javax.swing.JFrame {
         main_panel.setBackground(new java.awt.Color(0, 0, 0));
         main_panel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        appLogo_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/img/inAppLogo.png"))); // NOI18N
+        appLogo_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inAppLogo.png"))); // NOI18N
 
         create_txt.setFont(new java.awt.Font("Verdana", 2, 12)); // NOI18N
         create_txt.setForeground(new java.awt.Color(255, 102, 102));
@@ -2024,6 +1790,11 @@ public class TournaToolUI extends javax.swing.JFrame {
         exit_button.setBackground(new java.awt.Color(255, 102, 102));
         exit_button.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         exit_button.setText("EXIT");
+        exit_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exit_buttonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout main_panelLayout = new javax.swing.GroupLayout(main_panel);
         main_panel.setLayout(main_panelLayout);
@@ -2122,8 +1893,18 @@ public class TournaToolUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         String participantName = participants_txtField.getText();
-        writeParticipants();
+        
+        try {
+            ParticipantManager.addParticipant(participantName);
+        } catch (IOException ex) {
+            Logger.getLogger(TournaToolUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }//GEN-LAST:event_participants_buttonActionPerformed
+
+    private void exit_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exit_buttonActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_exit_buttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2134,29 +1915,33 @@ public class TournaToolUI extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TournaToolUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TournaToolUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TournaToolUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TournaToolUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(TournaToolUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(TournaToolUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(TournaToolUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(TournaToolUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TournaToolUI().setVisible(true);
+                try {
+                    new TournaToolUI().setVisible(true);
+                } catch (FileNotFoundException ex) {
+                    Logger.getLogger(TournaToolUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
@@ -2314,6 +2099,7 @@ public class TournaToolUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JToolBar jToolBar1;
@@ -2328,10 +2114,9 @@ public class TournaToolUI extends javax.swing.JFrame {
     private javax.swing.JLabel myEmail_txt;
     private javax.swing.JLabel myName_txt;
     private javax.swing.JButton participants_button;
-    private javax.swing.JList<String> participants_list;
-    private javax.swing.JScrollPane participants_scrollPane;
     private javax.swing.JSpinner participants_spinner;
     private javax.swing.JLabel participants_txt;
+    private javax.swing.JTextArea participants_txtArea;
     private javax.swing.JTextField participants_txtField;
     private javax.swing.JRadioButton points_choice;
     private javax.swing.JPanel quarterFinals_panel;
