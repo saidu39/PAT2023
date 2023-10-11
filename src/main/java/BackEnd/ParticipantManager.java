@@ -24,9 +24,9 @@ public class ParticipantManager {
     
     public static void addParticipant(String participantName) throws FileNotFoundException, IOException{
 
-        File participantsFile = new File("src\\main\\resources\\participants.txt");
+        File participantsFile = new File("participants.txt");
         
-        FileWriter participantsFW = new FileWriter("src\\main\\resources\\participants.txt",true);
+        FileWriter participantsFW = new FileWriter("participants.txt",true);
         participantsFW.write("\n"+participantName);
         participantsFW.close();
         
@@ -41,7 +41,7 @@ public class ParticipantManager {
         int p2Score = 0;
         int p2PreviousPosition = position*2;    //3*2 = 6
 
-        File f = new File("src\\main\\resources\\participants.txt");
+        File f = new File("participants.txt");
         Scanner fileSc = new Scanner(f);
         
 
