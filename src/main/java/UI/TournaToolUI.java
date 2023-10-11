@@ -39,10 +39,10 @@ public class TournaToolUI extends javax.swing.JFrame {
     public void updateBracket() throws FileNotFoundException{
         //ParticipantManager.getParticipantName(round, pos);
         //ParticipantManager.getParticipantScore(round, pos);
-        R4participant0.setText(ParticipantManager.getParticipantName("1","1"));
-        R4participant1.setText(ParticipantManager.getParticipantName("1","2"));
-        R4participant2.setText(ParticipantManager.getParticipantName("1","3"));
-        R4participant3.setText(ParticipantManager.getParticipantName("1","4"));
+        R4participant0.setText(ParticipantManager.getParticipantName(1,1));
+        R4participant1.setText(ParticipantManager.getParticipantName(1,2));
+        R4participant2.setText(ParticipantManager.getParticipantName(1,3));
+        R4participant3.setText(ParticipantManager.getParticipantName(1,4));
     }
 
     /**

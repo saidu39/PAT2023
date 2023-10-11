@@ -32,34 +32,45 @@ public class ParticipantManager {
         
     } 
     
-    public static String getParticipantName(String round, String pos) throws FileNotFoundException{
+    public static String getParticipantName(int round, int position) throws FileNotFoundException{
+        int previousRound = round - 1;
+        String p1 = "";
+        int p1Score = 0;
+        int p1PreviousPosition = position*2 - 1;   //3*2 -1 = 5
+        String p2 = "";
+        int p2Score = 0;
+        int p2PreviousPosition = position*2;    //3*2 = 6
 
+        File f = new File("src\\main\\resources\\participants.txt");
+        Scanner fileSc = new Scanner(f);
         
-        File participantsFile = new File("src\\main\\resources\\participants.txt");
-        Scanner participantsSC = new Scanner(participantsFile).useDelimiter("#");
 
-        if (participantsSC.hasNext()){
-            
-            tournament = participantsSC.next();
-            
-            if (participantsSC.next().equals(round)){
-                participantRound = round;
-                if (participantsSC.next().equals(pos)){
-                    participantPos = pos;
-                    name = participantsSC.next();
-                    score = participantsSC.next();
-                } else {
-                    participantsSC.next();
-                }
+        while(fileSc.hasNext()){ //use a while loop, not an if statement
+            String line = fileSc.nextLine(); //grab the whole line
+            Scanner lineSc = new Scanner(line).useDelimiter("#"); //use a second scanner to tokenize the line
+
+            String competition = lineSc.next();
+            round = lineSc.nextInt();
+            position = lineSc.nextInt();
+            String name = lineSc.next();
+            int score = lineSc.nextInt();
+
+            //here you can now do checks like "if(position > 1)" or something like that.
+            if(round == previousRound && position == p1PreviousPosition){
+                p1 = name;
+                p1Score = score;
+            }
+            if(round == previousRound && position == p2PreviousPosition){
+                p2 = name;
+                p2Score = score;
+            }
+
+            if(p1Score > p2Score){
+            return p1;
             } else {
-                participantsSC.next();
-                participantsSC.next();
-                participantsSC.next();
-            } 
+                return p2;
+            }
         }
-        
-        participantsSC.close();
-        return name;
-        
-    }    
+        return null;
+    }
 }
