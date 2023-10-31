@@ -4,41 +4,463 @@
  */
 package UI;
 
-import java.awt.Color;
+import BackEnd.Read;
+import BackEnd.StartingInfo;
+import BackEnd.Write;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
  *
- * @author Saien Naidu
+ * @author LATITUDE 5480
  */
-public class TournaToolUI extends javax.swing.JFrame {
+public class SavedTournament0_UI extends javax.swing.JFrame {
 
-    public static int participantsAdded = 0;
-    public static String choice = "";
+    public static int round = 0;
+    public static int maxParticipants0;
+    public String victor;
+    public String loser;
+    public String winningSide;
 
-    private void resetColors() {
-        Color bold = new Color(222, 222, 222);
-
-        title_txt.setForeground(bold);
+    private void updateBracket() throws FileNotFoundException, IOException {
         
+        R1participant0.setText(Read.getParticipants(Read.getTournamentName(0), 1, 1));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 1));
+        R1participant1.setText(Read.getParticipants(Read.getTournamentName(0), 1, 2));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 2));
+        R1participant2.setText(Read.getParticipants(Read.getTournamentName(0), 1, 3));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 3));
+        R1participant3.setText(Read.getParticipants(Read.getTournamentName(0), 1, 4));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 4));
+        R1participant4.setText(Read.getParticipants(Read.getTournamentName(0), 1, 5));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 5));
+        R1participant5.setText(Read.getParticipants(Read.getTournamentName(0), 1, 6));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 6));
+        R1participant6.setText(Read.getParticipants(Read.getTournamentName(0), 1, 7));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 7));
+        R1participant7.setText(Read.getParticipants(Read.getTournamentName(0), 1, 8));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 8));
+        R1participant8.setText(Read.getParticipants(Read.getTournamentName(0), 1, 9));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 9));
+        R1participant9.setText(Read.getParticipants(Read.getTournamentName(0), 1, 10));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 10));
+        R1participant10.setText(Read.getParticipants(Read.getTournamentName(0), 1, 11));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 11));
+        R1participant11.setText(Read.getParticipants(Read.getTournamentName(0), 1, 12));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 12));
+        R1participant12.setText(Read.getParticipants(Read.getTournamentName(0), 1, 13));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 13));
+        R1participant13.setText(Read.getParticipants(Read.getTournamentName(0), 1, 14));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 14));
+        R1participant14.setText(Read.getParticipants(Read.getTournamentName(0), 1, 15));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 15));
+        R1participant15.setText(Read.getParticipants(Read.getTournamentName(0), 1, 16));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 16));
+        R1participant16.setText(Read.getParticipants(Read.getTournamentName(0), 1, 17));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 17));
+        R1participant17.setText(Read.getParticipants(Read.getTournamentName(0), 1, 18));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 18));
+        R1participant18.setText(Read.getParticipants(Read.getTournamentName(0), 1, 19));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 19));
+        R1participant19.setText(Read.getParticipants(Read.getTournamentName(0), 1, 20));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 20));
+        R1participant20.setText(Read.getParticipants(Read.getTournamentName(0), 1, 21));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 21));
+        R1participant21.setText(Read.getParticipants(Read.getTournamentName(0), 1, 22));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 22));
+        R1participant22.setText(Read.getParticipants(Read.getTournamentName(0), 1, 23));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 23));
+        R1participant23.setText(Read.getParticipants(Read.getTournamentName(0), 1, 24));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 24));
+        R1participant24.setText(Read.getParticipants(Read.getTournamentName(0), 1, 25));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 25));
+        R1participant25.setText(Read.getParticipants(Read.getTournamentName(0), 1, 26));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 26));
+        R1participant26.setText(Read.getParticipants(Read.getTournamentName(0), 1, 27));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 27));
+        R1participant27.setText(Read.getParticipants(Read.getTournamentName(0), 1, 28));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 28));
+        R1participant28.setText(Read.getParticipants(Read.getTournamentName(0), 1, 29));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 29));
+        R1participant29.setText(Read.getParticipants(Read.getTournamentName(0), 1, 30));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 30));
+        R1participant30.setText(Read.getParticipants(Read.getTournamentName(0), 1, 31));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 31));
+        R1participant31.setText(Read.getParticipants(Read.getTournamentName(0), 1, 32));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 1, 32));
+
+        R2participant0.setText(Read.getParticipants(Read.getTournamentName(0), 2, 1));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 2, 1));
+        R2participant1.setText(Read.getParticipants(Read.getTournamentName(0), 2, 2));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 2, 2));
+        R2participant2.setText(Read.getParticipants(Read.getTournamentName(0), 2, 3));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 2, 3));
+        R2participant3.setText(Read.getParticipants(Read.getTournamentName(0), 2, 4));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 2, 4));
+        R2participant4.setText(Read.getParticipants(Read.getTournamentName(0), 2, 5));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 2, 5));
+        R2participant5.setText(Read.getParticipants(Read.getTournamentName(0), 2, 6));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 2, 6));
+        R2participant6.setText(Read.getParticipants(Read.getTournamentName(0), 2, 7));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 2, 7));
+        R2participant7.setText(Read.getParticipants(Read.getTournamentName(0), 2, 8));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 2, 8));
+        R2participant8.setText(Read.getParticipants(Read.getTournamentName(0), 2, 9));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 2, 9));
+        R2participant9.setText(Read.getParticipants(Read.getTournamentName(0), 2, 10));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 2, 10));
+        R2participant10.setText(Read.getParticipants(Read.getTournamentName(0), 2, 11));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 2, 11));
+        R2participant11.setText(Read.getParticipants(Read.getTournamentName(0), 2, 12));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 2, 12));
+        R2participant12.setText(Read.getParticipants(Read.getTournamentName(0), 2, 13));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 2, 13));
+        R2participant13.setText(Read.getParticipants(Read.getTournamentName(0), 2, 14));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 2, 14));
+        R2participant14.setText(Read.getParticipants(Read.getTournamentName(0), 2, 15));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 2, 15));
+        R2participant15.setText(Read.getParticipants(Read.getTournamentName(0), 2, 16));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0), 2, 16));
+
+        R3participant0.setText(Read.getParticipants(Read.getTournamentName(0), 3, 1));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0),3, 1));
+        R3participant1.setText(Read.getParticipants(Read.getTournamentName(0), 3, 2));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0),3, 2));
+        R3participant2.setText(Read.getParticipants(Read.getTournamentName(0), 3, 3));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0),3, 3));
+        R3participant3.setText(Read.getParticipants(Read.getTournamentName(0), 3, 4));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0),3, 4));
+        R3participant4.setText(Read.getParticipants(Read.getTournamentName(0), 3, 5));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0),3, 5));
+        R3participant5.setText(Read.getParticipants(Read.getTournamentName(0), 3, 6));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0),3, 6));
+        R3participant6.setText(Read.getParticipants(Read.getTournamentName(0), 3, 7));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0),3, 7));
+        R3participant7.setText(Read.getParticipants(Read.getTournamentName(0), 3, 8));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0),3, 8));
+
+        R4participant0.setText(Read.getParticipants(Read.getTournamentName(0), 4, 1));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0),4, 1));
+        R4participant1.setText(Read.getParticipants(Read.getTournamentName(0), 4, 2));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0),4, 2));
+        R4participant2.setText(Read.getParticipants(Read.getTournamentName(0), 4, 3));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0),4, 3));
+        R4participant3.setText(Read.getParticipants(Read.getTournamentName(0), 4, 4));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0),4, 4));
+
+        R5participant0.setText(Read.getParticipants(Read.getTournamentName(0), 5, 1));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0),5, 1));
+        R5participant1.setText(Read.getParticipants(Read.getTournamentName(0), 5, 2));
+        R1points0.setText(Read.getScores(Read.getTournamentName(0),5, 2));
+
+    }
+
+    public String getWinner() throws FileNotFoundException {
+
+        String nameLeft = participantLeft_txt.getText();
+        String nameRight = participantRight_txt.getText();
+
+        int pointLeft = Integer.parseInt(participantLeftScore_txtField.getText());
+        int pointRight = Integer.parseInt(participantRightScore_txtField.getText());
+
+        if (pointLeft < pointRight) {
+            winningSide = "right";
+            round = Read.getParticipantRound(Read.getTournamentName(0), nameRight, Read.getParticipantPos(Read.getTournamentName(0), nameRight));
+            return nameRight;
+        } else {
+            winningSide = "left";
+            round = Read.getParticipantRound(Read.getTournamentName(0), nameLeft, Read.getParticipantPos(Read.getTournamentName(0), nameLeft));
+            return nameLeft;
+        }
+
+    }
+
+    private void setStartingParticipants() throws FileNotFoundException, IOException {
+
+        String check = Read.firstParticipantsSetCheck();
+
+        if (check.equals("yes")) {
+
+            String left = Read.getStartingParticipants(1);
+            String right = Read.getStartingParticipants(2);
+
+            Write.setParticipantLeft0(left, StartingInfo.getStartingRound(Read.getMaxParticipants(0)), (StartingInfo.getMaxStartingRoundPos(Read.getMaxParticipants(0)) - 1), 0);
+            Write.setParticipantRight0(right, StartingInfo.getStartingRound(Read.getMaxParticipants(0)), StartingInfo.getMaxStartingRoundPos(Read.getMaxParticipants(0)), 0);
+
+            participantLeft_txt.setText(left);
+            participantRight_txt.setText(right);
+
+            Write.firstParticipantsSet0();
+
+        } else {
+            
+            participantLeft_txt.setText(Read.getNextLeftParticipant0(Read.getTournamentName(0)));
+            participantRight_txt.setText(Read.getNextRightParticipant0(Read.getTournamentName(0)));
+            
+        }
+
+    }
+
+    public void proceed() throws FileNotFoundException, IOException {
+
+        String tournament = Read.getTournamentName(0);
+        victor = winnerName_txt.getText();
+        if (!participantLeft_txt.getText().equals(victor)){
+            loser = participantLeft_txt.getText();
+        } else {
+            loser = participantRight_txt.getText();
+        }
+        int pos = Read.getParticipantPos(Read.getTournamentName(0), victor);
+        String scoreLeft = participantLeftScore_txtField.getText();
+        String scoreRight = participantRightScore_txtField.getText();
+
+        int whilePos = pos;
+
+        while (whilePos <= 32) {
+            switch (round) {
+
+                case 1:
+
+                    switch (whilePos) {
+
+                        case 1, 2 -> {
+                            R1points0.setText(scoreLeft);
+                            R1points1.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 3, 4 -> {
+                            R1points2.setText(scoreLeft);
+                            R1points3.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 5, 6 -> {
+                            R1points4.setText(scoreLeft);
+                            R1points5.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 7, 8 -> {
+                            R1points6.setText(scoreLeft);
+                            R1points7.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 9, 10 -> {
+                            R1points8.setText(scoreLeft);
+                            R1points9.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 11, 12 -> {
+                            R1points10.setText(scoreLeft);
+                            R1points11.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 13, 14 -> {
+                            R1points12.setText(scoreLeft);
+                            R1points13.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 15, 16 -> {
+                            R1points14.setText(scoreLeft);
+                            R1points15.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 17, 18 -> {
+                            R1points16.setText(scoreLeft);
+                            R1points17.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 19, 20 -> {
+                            R1points18.setText(scoreLeft);
+                            R1points19.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 21, 22 -> {
+                            R1points20.setText(scoreLeft);
+                            R1points21.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 23, 24 -> {
+                            R1points22.setText(scoreLeft);
+                            R1points23.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 25, 26 -> {
+                            R1points24.setText(scoreLeft);
+                            R1points25.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 27, 28 -> {
+                            R1points26.setText(scoreLeft);
+                            R1points27.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 29, 30 -> {
+                            R1points28.setText(scoreLeft);
+                            R1points29.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 31, 32 -> {
+                            R1points30.setText(scoreLeft);
+                            R1points31.setText(scoreRight);
+                            whilePos = 33;
+                        }
+
+                    }
+
+                case 2:
+
+                    switch (whilePos) {
+
+                        case 1, 2 -> {
+                            R2points0.setText(scoreLeft);
+                            R2points1.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 3, 4 -> {
+                            R2points2.setText(scoreLeft);
+                            R2points3.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 5, 6 -> {
+                            R2points4.setText(scoreLeft);
+                            R2points5.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 7, 8 -> {
+                            R2points6.setText(scoreLeft);
+                            R2points7.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 9, 10 -> {
+                            R2points8.setText(scoreLeft);
+                            R2points9.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 11, 12 -> {
+                            R2points10.setText(scoreLeft);
+                            R2points11.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 13, 14 -> {
+                            R2points12.setText(scoreLeft);
+                            R2points13.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 15, 16 -> {
+                            R2points14.setText(scoreLeft);
+                            R2points15.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                    }
+
+                case 3:
+
+                    switch (whilePos) {
+
+                        case 1, 2 -> {
+                            R3points0.setText(scoreLeft);
+                            R3points1.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 3, 4 -> {
+                            R3points2.setText(scoreLeft);
+                            R3points3.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 5, 6 -> {
+                            R3points4.setText(scoreLeft);
+                            R3points5.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 7, 8 -> {
+                            R3points6.setText(scoreLeft);
+                            R3points7.setText(scoreRight);
+                            whilePos = 33;
+                        }
+
+                    }
+
+                case 4:
+
+                    switch (whilePos) {
+
+                        case 1, 2 -> {
+                            R4points0.setText(scoreLeft);
+                            R4points1.setText(scoreRight);
+                            whilePos = 33;
+                        }
+                        case 3, 4 -> {
+                            R4points2.setText(scoreLeft);
+                            R4points3.setText(scoreRight);
+                            whilePos = 33;
+                        }
+
+                    }
+
+                case 5:
+
+                    switch (whilePos) {
+
+                        case 1, 2 -> {
+                            R5points0.setText(scoreLeft);
+                            R5points1.setText(scoreRight);
+                            whilePos = 33;
+                        }
+
+                    }
+            }
+        }
+
+        
+        
+        if (winningSide.equals("left")){
+            Write.updateParticipants(round, pos, scoreLeft);
+            Write.updateScore(Read.getTournamentName(0), round++, (pos + 1), scoreRight, false);
+            participantLeft_txt.setText(Write.updateParticipantLeft0(round, pos));
+            participantRight_txt.setText(Write.updateParticipantRight0(round, (pos + 1)));
+        } else {
+            Write.updateParticipants(round, pos, scoreRight);
+            Write.updateScore(Read.getTournamentName(0), round++, (pos - 1) , scoreLeft, false);
+            participantLeft_txt.setText(Write.updateParticipantLeft0(round, (pos - 1)));
+            participantRight_txt.setText(Write.updateParticipantRight0(round, pos));
+        }
+        
+        participantLeftScore_txtField.setText("");
+        participantRightScore_txtField.setText("");
+        winnerName_txt.setText("");
+        
+        updateBracket();
+
+        /*switch (pos) {
+
+            case 1, 2, 5, 6, 9, 10, 13, 14, 17, 18, 21, 22, 25, 26, 29, 30 -> {
+                participantLeft_txt.setText(Write.setParticipantLeft0(victor, (round + 1), ((pos / 2) + (pos % 2)), 0));
+                participantRight_txt.setText(Write.setParticipantRight0(Read.getParticipants(Read.getTournamentName(0), (round + 1), pos), (round + 1), pos, 0));
+            }
+
+            case 3, 4, 7, 8, 11, 12, 15, 16, 19, 20, 23, 24, 27, 28, 31, 32 -> {
+                participantRight_txt.setText(Write.setParticipantRight0(victor, (round + 1), ((pos / 2) + (pos % 2)), 0));
+                participantLeft_txt.setText(Write.setParticipantLeft0(Read.getParticipants(Read.getTournamentName(0), (round + 1), pos), (round + 1), pos, 0));
+            }
+
+        }*/
+
     }
 
     /**
-     * Creates new form TournaTool
-     * @throws java.io.FileNotFoundException
+     * Creates new form SavedTournament0_UI
+     *
+     * @throws java.io.IOException
      */
-    public TournaToolUI() throws FileNotFoundException {
-
+    public SavedTournament0_UI() throws IOException {
         initComponents();
-
-        resetColors();
-        setLocationRelativeTo(null);
-
+        updateBracket();
+        setStartingParticipants();
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -48,45 +470,18 @@ public class TournaToolUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton2 = new javax.swing.JButton();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel65 = new javax.swing.JLabel();
-        jLabel66 = new javax.swing.JLabel();
-        jToolBar1 = new javax.swing.JToolBar();
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jButton3 = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         mainTabbed = new javax.swing.JTabbedPane();
-        create_panel = new javax.swing.JPanel();
-        createTabbed = new javax.swing.JTabbedPane();
-        basicInfo_panel = new javax.swing.JPanel();
-        title_txt = new javax.swing.JLabel();
-        title_TxtFld = new javax.swing.JTextField();
-        displayImage_txt = new javax.swing.JLabel();
-        displayImage_img = new javax.swing.JLabel();
-        displayImage_button = new javax.swing.JButton();
-        continue_button = new javax.swing.JButton();
-        participants_txt = new javax.swing.JLabel();
-        participants_spinner = new javax.swing.JSpinner();
-        maxParticipants_txt = new javax.swing.JLabel();
-        participants_txtField = new javax.swing.JTextField();
-        participants_button = new javax.swing.JButton();
-        scoreMetric_txt = new javax.swing.JLabel();
-        scoreMetric_panel = new javax.swing.JPanel();
-        points_choice = new javax.swing.JRadioButton();
-        time_choice = new javax.swing.JRadioButton();
-        winORlose_choice = new javax.swing.JRadioButton();
-        rating_choice = new javax.swing.JRadioButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        participants_txtArea = new javax.swing.JTextArea();
-        knockout_panel = new javax.swing.JPanel();
-        knockout_ScrollPanel = new javax.swing.JScrollPane();
+        proceed_UPpanel = new javax.swing.JPanel();
+        proceed_LOWpanel = new javax.swing.JPanel();
+        participantLeft_txt = new javax.swing.JLabel();
+        participantRight_txt = new javax.swing.JLabel();
+        participantLeftScore_txtField = new javax.swing.JTextField();
+        participantRightScore_txtField = new javax.swing.JTextField();
+        confirm_button = new javax.swing.JButton();
+        winner_txt = new javax.swing.JLabel();
+        winnerName_txt = new javax.swing.JLabel();
+        proceed_button = new javax.swing.JButton();
+        bracket_ScrollPane = new javax.swing.JScrollPane();
         knockoutTournament_panel = new javax.swing.JPanel();
         roundOf32_txt = new javax.swing.JLabel();
         roundOf32_panel = new javax.swing.JPanel();
@@ -189,20 +584,20 @@ public class TournaToolUI extends javax.swing.JFrame {
         R2points15 = new javax.swing.JLabel();
         quarterFinals_panel = new javax.swing.JPanel();
         R3participant0 = new javax.swing.JLabel();
-        R3points0 = new javax.swing.JLabel();
-        R3participant1 = new javax.swing.JLabel();
-        R3points1 = new javax.swing.JLabel();
         R3participant2 = new javax.swing.JLabel();
-        R3points2 = new javax.swing.JLabel();
         R3participant3 = new javax.swing.JLabel();
-        R3points3 = new javax.swing.JLabel();
         R3participant4 = new javax.swing.JLabel();
-        R3points4 = new javax.swing.JLabel();
         R3participant5 = new javax.swing.JLabel();
-        R3points5 = new javax.swing.JLabel();
         R3participant6 = new javax.swing.JLabel();
-        R3points6 = new javax.swing.JLabel();
         R3participant7 = new javax.swing.JLabel();
+        R3participant1 = new javax.swing.JLabel();
+        R3points0 = new javax.swing.JLabel();
+        R3points1 = new javax.swing.JLabel();
+        R3points2 = new javax.swing.JLabel();
+        R3points3 = new javax.swing.JLabel();
+        R3points4 = new javax.swing.JLabel();
+        R3points5 = new javax.swing.JLabel();
+        R3points6 = new javax.swing.JLabel();
         R3points7 = new javax.swing.JLabel();
         roundOd16_txt = new javax.swing.JLabel();
         quaterFinals_txt = new javax.swing.JLabel();
@@ -224,345 +619,148 @@ public class TournaToolUI extends javax.swing.JFrame {
         finals_txt = new javax.swing.JLabel();
         winners_panel = new javax.swing.JPanel();
         winner = new javax.swing.JLabel();
-        winner_txt = new javax.swing.JLabel();
-        manage_panel = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        settings_panel = new javax.swing.JPanel();
-        feedback_panel = new javax.swing.JPanel();
-        creator_txt = new javax.swing.JLabel();
-        myName_txt = new javax.swing.JLabel();
-        contact1_txt = new javax.swing.JLabel();
-        myEmail_txt = new javax.swing.JLabel();
-        contact0_txt = new javax.swing.JLabel();
-        main_panel = new javax.swing.JPanel();
-        appLogo_img = new javax.swing.JLabel();
-        create_txt = new javax.swing.JLabel();
-        manage_txt = new javax.swing.JLabel();
-        setting_txt = new javax.swing.JLabel();
-        feedback_txt = new javax.swing.JLabel();
-        exit_button = new javax.swing.JButton();
-
-        jButton2.setText("jButton2");
-
-        jLabel27.setText("jLabel27");
-
-        jLabel33.setText("jLabel33");
-
-        jLabel65.setText("jLabel65");
-
-        jLabel66.setText("jLabel66");
-
-        jToolBar1.setRollover(true);
-
-        jLabel24.setText("jLabel1");
-
-        jLabel25.setText("jLabel1");
-
-        jButton1.setText("jButton1");
-
-        jCheckBox1.setText("jCheckBox1");
-
-        jButton3.setText("jButton3");
-
-        jTable1.setBackground(new java.awt.Color(51, 0, 0));
-        jTable1.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
-        jTable1.setForeground(new java.awt.Color(0, 0, 0));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jTable1.setSelectionBackground(new java.awt.Color(0, 0, 0));
-        jTable1.setSelectionForeground(new java.awt.Color(0, 0, 0));
-        jScrollPane2.setViewportView(jTable1);
+        winner_txt1 = new javax.swing.JLabel();
+        mainPanel = new javax.swing.JPanel();
+        main_panel8 = new javax.swing.JPanel();
+        appLogo_img8 = new javax.swing.JLabel();
+        create_txt8 = new javax.swing.JLabel();
+        manage_txt8 = new javax.swing.JLabel();
+        setting_txt8 = new javax.swing.JLabel();
+        feedback_txt8 = new javax.swing.JLabel();
+        exit_button8 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(204, 0, 0));
-        setName("MainScrean"); // NOI18N
 
         mainTabbed.setBackground(new java.awt.Color(153, 0, 0));
         mainTabbed.setForeground(new java.awt.Color(255, 102, 102));
-        mainTabbed.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         mainTabbed.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        mainTabbed.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                mainTabbedPropertyChange(evt);
-            }
-        });
 
-        create_panel.setBackground(new java.awt.Color(0, 0, 0));
+        proceed_LOWpanel.setBackground(new java.awt.Color(51, 0, 0));
 
-        createTabbed.setBackground(new java.awt.Color(153, 0, 0));
-        createTabbed.setForeground(new java.awt.Color(255, 102, 102));
-        createTabbed.setTabPlacement(javax.swing.JTabbedPane.LEFT);
-        createTabbed.setFont(new java.awt.Font("Verdana", 2, 10)); // NOI18N
+        participantLeft_txt.setBackground(new java.awt.Color(0, 0, 0));
+        participantLeft_txt.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        participantLeft_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        participantLeft_txt.setText(" ");
+        participantLeft_txt.setToolTipText("");
+        participantLeft_txt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
 
-        basicInfo_panel.setBackground(new java.awt.Color(51, 0, 0));
+        participantRight_txt.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        participantRight_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        participantRight_txt.setText(" ");
+        participantRight_txt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
 
-        title_txt.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
-        title_txt.setText("Title");
-
-        title_TxtFld.setBackground(new java.awt.Color(0, 0, 0));
-        title_TxtFld.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
-        title_TxtFld.setForeground(new java.awt.Color(102, 102, 102));
-        title_TxtFld.setText("Enter title...");
-        title_TxtFld.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-        title_TxtFld.addActionListener(new java.awt.event.ActionListener() {
+        participantLeftScore_txtField.setBackground(new java.awt.Color(0, 0, 0));
+        participantLeftScore_txtField.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
+        participantLeftScore_txtField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        participantLeftScore_txtField.setText("Enter points");
+        participantLeftScore_txtField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
+        participantLeftScore_txtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                title_TxtFldActionPerformed(evt);
+                participantLeftScore_txtFieldActionPerformed(evt);
             }
         });
 
-        displayImage_txt.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
-        displayImage_txt.setText("Display Image");
-
-        displayImage_img.setForeground(new java.awt.Color(153, 153, 153));
-        displayImage_img.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        displayImage_img.setText("100x100");
-        displayImage_img.setToolTipText("");
-        displayImage_img.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-        displayImage_img.setMaximumSize(new java.awt.Dimension(100, 100));
-        displayImage_img.setPreferredSize(new java.awt.Dimension(100, 100));
-
-        displayImage_button.setBackground(new java.awt.Color(0, 0, 0));
-        displayImage_button.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
-        displayImage_button.setText("Import...");
-        displayImage_button.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-        displayImage_button.addActionListener(new java.awt.event.ActionListener() {
+        participantRightScore_txtField.setBackground(new java.awt.Color(0, 0, 0));
+        participantRightScore_txtField.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
+        participantRightScore_txtField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        participantRightScore_txtField.setText("Enter points");
+        participantRightScore_txtField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
+        participantRightScore_txtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                displayImage_buttonActionPerformed(evt);
+                participantRightScore_txtFieldActionPerformed(evt);
             }
         });
 
-        continue_button.setBackground(new java.awt.Color(0, 0, 0));
-        continue_button.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
-        continue_button.setText("Save");
-        continue_button.addActionListener(new java.awt.event.ActionListener() {
+        confirm_button.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
+        confirm_button.setText("Confirm");
+        confirm_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                continue_buttonActionPerformed(evt);
+                confirm_buttonActionPerformed(evt);
             }
         });
 
-        participants_txt.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
-        participants_txt.setText("Participants:");
+        winner_txt.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        winner_txt.setForeground(new java.awt.Color(255, 204, 0));
+        winner_txt.setText("Winner:");
+        winner_txt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0)));
 
-        participants_spinner.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
-        participants_spinner.setModel(new javax.swing.SpinnerNumberModel(2, 2, 32, 2));
-        participants_spinner.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
+        winnerName_txt.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        winnerName_txt.setText(" ");
+        winnerName_txt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
 
-        maxParticipants_txt.setFont(new java.awt.Font("Verdana", 2, 10)); // NOI18N
-        maxParticipants_txt.setForeground(new java.awt.Color(102, 102, 102));
-        maxParticipants_txt.setText("Max: 32");
-
-        participants_txtField.setBackground(new java.awt.Color(0, 0, 0));
-        participants_txtField.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
-        participants_txtField.setForeground(new java.awt.Color(102, 102, 102));
-        participants_txtField.setText("Enter participant name...");
-        participants_txtField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-        participants_txtField.addActionListener(new java.awt.event.ActionListener() {
+        proceed_button.setBackground(new java.awt.Color(0, 0, 0));
+        proceed_button.setText("Proceed");
+        proceed_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                participants_txtFieldActionPerformed(evt);
+                proceed_buttonActionPerformed(evt);
             }
         });
 
-        participants_button.setBackground(new java.awt.Color(0, 0, 0));
-        participants_button.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
-        participants_button.setText("OK");
-        participants_button.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-        participants_button.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                participants_buttonMouseClicked(evt);
-            }
-        });
-        participants_button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                participants_buttonActionPerformed(evt);
-            }
-        });
-
-        scoreMetric_txt.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
-        scoreMetric_txt.setText("Score metric:");
-
-        scoreMetric_panel.setBackground(new java.awt.Color(0, 0, 0));
-        scoreMetric_panel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-
-        points_choice.setBackground(new java.awt.Color(0, 0, 0));
-        points_choice.setFont(new java.awt.Font("Verdana", 0, 9)); // NOI18N
-        points_choice.setText("Points");
-        points_choice.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-        points_choice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                points_choiceActionPerformed(evt);
-            }
-        });
-
-        time_choice.setBackground(new java.awt.Color(0, 0, 0));
-        time_choice.setFont(new java.awt.Font("Verdana", 0, 9)); // NOI18N
-        time_choice.setText("Time");
-        time_choice.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-        time_choice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                time_choiceActionPerformed(evt);
-            }
-        });
-
-        winORlose_choice.setBackground(new java.awt.Color(0, 0, 0));
-        winORlose_choice.setFont(new java.awt.Font("Verdana", 0, 9)); // NOI18N
-        winORlose_choice.setText("Win/Lose");
-        winORlose_choice.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-        winORlose_choice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                winORlose_choiceActionPerformed(evt);
-            }
-        });
-
-        rating_choice.setBackground(new java.awt.Color(0, 0, 0));
-        rating_choice.setFont(new java.awt.Font("Verdana", 0, 9)); // NOI18N
-        rating_choice.setText("Rating (decimal)");
-        rating_choice.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-        rating_choice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rating_choiceActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout scoreMetric_panelLayout = new javax.swing.GroupLayout(scoreMetric_panel);
-        scoreMetric_panel.setLayout(scoreMetric_panelLayout);
-        scoreMetric_panelLayout.setHorizontalGroup(
-            scoreMetric_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(scoreMetric_panelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(scoreMetric_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(points_choice)
-                    .addComponent(time_choice)
-                    .addComponent(winORlose_choice)
-                    .addComponent(rating_choice))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        scoreMetric_panelLayout.setVerticalGroup(
-            scoreMetric_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(scoreMetric_panelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(points_choice)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(time_choice)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(winORlose_choice)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rating_choice)
-                .addContainerGap(58, Short.MAX_VALUE))
-        );
-
-        participants_txtArea.setBackground(new java.awt.Color(0, 0, 0));
-        participants_txtArea.setColumns(20);
-        participants_txtArea.setRows(5);
-        participants_txtArea.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-        jScrollPane1.setViewportView(participants_txtArea);
-
-        javax.swing.GroupLayout basicInfo_panelLayout = new javax.swing.GroupLayout(basicInfo_panel);
-        basicInfo_panel.setLayout(basicInfo_panelLayout);
-        basicInfo_panelLayout.setHorizontalGroup(
-            basicInfo_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(basicInfo_panelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(basicInfo_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(title_TxtFld, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                    .addComponent(title_txt)
-                    .addGroup(basicInfo_panelLayout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addComponent(displayImage_txt))
-                    .addGroup(basicInfo_panelLayout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addGroup(basicInfo_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(displayImage_button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(displayImage_img, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(scoreMetric_txt)
-                    .addComponent(scoreMetric_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        javax.swing.GroupLayout proceed_LOWpanelLayout = new javax.swing.GroupLayout(proceed_LOWpanel);
+        proceed_LOWpanel.setLayout(proceed_LOWpanelLayout);
+        proceed_LOWpanelLayout.setHorizontalGroup(
+            proceed_LOWpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(proceed_LOWpanelLayout.createSequentialGroup()
+                .addGroup(proceed_LOWpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(proceed_LOWpanelLayout.createSequentialGroup()
+                        .addGap(122, 122, 122)
+                        .addComponent(confirm_button)
+                        .addGap(134, 134, 134))
+                    .addGroup(proceed_LOWpanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(proceed_LOWpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(participantLeft_txt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(participantRight_txt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(participantLeftScore_txtField)
+                            .addComponent(participantRightScore_txtField))
+                        .addGap(27, 27, 27)))
+                .addComponent(winner_txt)
                 .addGap(18, 18, 18)
-                .addGroup(basicInfo_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(basicInfo_panelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(continue_button))
-                    .addGroup(basicInfo_panelLayout.createSequentialGroup()
-                        .addComponent(participants_txt)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(participants_spinner, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(maxParticipants_txt)
-                        .addGap(24, 24, 24)
-                        .addComponent(participants_txtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(participants_button, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1))
+                .addComponent(winnerName_txt, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(proceed_button)
                 .addContainerGap())
         );
-        basicInfo_panelLayout.setVerticalGroup(
-            basicInfo_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(basicInfo_panelLayout.createSequentialGroup()
+        proceed_LOWpanelLayout.setVerticalGroup(
+            proceed_LOWpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(proceed_LOWpanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(basicInfo_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(participants_txtField, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(basicInfo_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(title_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(participants_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(participants_spinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(maxParticipants_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(participants_button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(basicInfo_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(basicInfo_panelLayout.createSequentialGroup()
-                        .addComponent(title_TxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(displayImage_txt)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(displayImage_img, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(displayImage_button, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(scoreMetric_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(scoreMetric_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(continue_button)
+                .addComponent(participantLeft_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(participantLeftScore_txtField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
+                .addGroup(proceed_LOWpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(winner_txt, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                    .addComponent(winnerName_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(confirm_button)
+                    .addComponent(proceed_button, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addComponent(participantRightScore_txtField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(participantRight_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        createTabbed.addTab("Basic Info", basicInfo_panel);
+        javax.swing.GroupLayout proceed_UPpanelLayout = new javax.swing.GroupLayout(proceed_UPpanel);
+        proceed_UPpanel.setLayout(proceed_UPpanelLayout);
+        proceed_UPpanelLayout.setHorizontalGroup(
+            proceed_UPpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(proceed_LOWpanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        proceed_UPpanelLayout.setVerticalGroup(
+            proceed_UPpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(proceed_LOWpanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
-        knockout_panel.setBackground(new java.awt.Color(51, 0, 0));
+        mainTabbed.addTab("PROCEED", proceed_UPpanel);
 
-        knockout_ScrollPanel.setBackground(new java.awt.Color(51, 0, 0));
-        knockout_ScrollPanel.setForeground(new java.awt.Color(51, 0, 0));
-
-        knockoutTournament_panel.setBackground(new java.awt.Color(51, 0, 0));
+        knockoutTournament_panel.setBackground(new java.awt.Color(0, 0, 0));
 
         roundOf32_txt.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
-        roundOf32_txt.setForeground(new java.awt.Color(255, 102, 102));
+        roundOf32_txt.setForeground(new java.awt.Color(102, 0, 0));
         roundOf32_txt.setText("Round of 32");
 
-        roundOf32_panel.setBackground(new java.awt.Color(51, 0, 0));
+        roundOf32_panel.setBackground(new java.awt.Color(0, 0, 0));
         roundOf32_panel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         roundOf32_panel.setForeground(new java.awt.Color(51, 0, 0));
 
@@ -570,161 +768,193 @@ public class TournaToolUI extends javax.swing.JFrame {
         R1participant0.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant0.setForeground(new java.awt.Color(255, 255, 255));
         R1participant0.setText(" ");
+        R1participant0.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant1.setBackground(new java.awt.Color(255, 255, 255));
         R1participant1.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant1.setForeground(new java.awt.Color(255, 255, 255));
         R1participant1.setText(" ");
+        R1participant1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant2.setBackground(new java.awt.Color(255, 255, 255));
         R1participant2.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant2.setForeground(new java.awt.Color(255, 255, 255));
         R1participant2.setText(" ");
+        R1participant2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant3.setBackground(new java.awt.Color(255, 255, 255));
         R1participant3.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant3.setForeground(new java.awt.Color(255, 255, 255));
         R1participant3.setText(" ");
+        R1participant3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant4.setBackground(new java.awt.Color(255, 255, 255));
         R1participant4.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant4.setForeground(new java.awt.Color(255, 255, 255));
         R1participant4.setText(" ");
+        R1participant4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant5.setBackground(new java.awt.Color(255, 255, 255));
         R1participant5.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant5.setForeground(new java.awt.Color(255, 255, 255));
         R1participant5.setText(" ");
+        R1participant5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant6.setBackground(new java.awt.Color(255, 255, 255));
         R1participant6.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant6.setForeground(new java.awt.Color(255, 255, 255));
         R1participant6.setText(" ");
+        R1participant6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant7.setBackground(new java.awt.Color(255, 255, 255));
         R1participant7.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant7.setForeground(new java.awt.Color(255, 255, 255));
         R1participant7.setText(" ");
+        R1participant7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant8.setBackground(new java.awt.Color(255, 255, 255));
         R1participant8.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant8.setForeground(new java.awt.Color(255, 255, 255));
         R1participant8.setText(" ");
+        R1participant8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant9.setBackground(new java.awt.Color(255, 255, 255));
         R1participant9.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant9.setForeground(new java.awt.Color(255, 255, 255));
         R1participant9.setText(" ");
+        R1participant9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant10.setBackground(new java.awt.Color(255, 255, 255));
         R1participant10.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant10.setForeground(new java.awt.Color(255, 255, 255));
         R1participant10.setText(" ");
+        R1participant10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant11.setBackground(new java.awt.Color(255, 255, 255));
         R1participant11.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant11.setForeground(new java.awt.Color(255, 255, 255));
         R1participant11.setText(" ");
+        R1participant11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant12.setBackground(new java.awt.Color(255, 255, 255));
         R1participant12.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant12.setForeground(new java.awt.Color(255, 255, 255));
         R1participant12.setText(" ");
+        R1participant12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant13.setBackground(new java.awt.Color(255, 255, 255));
         R1participant13.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant13.setForeground(new java.awt.Color(255, 255, 255));
         R1participant13.setText(" ");
+        R1participant13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant14.setBackground(new java.awt.Color(255, 255, 255));
         R1participant14.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant14.setForeground(new java.awt.Color(255, 255, 255));
         R1participant14.setText(" ");
+        R1participant14.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant15.setBackground(new java.awt.Color(255, 255, 255));
         R1participant15.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant15.setForeground(new java.awt.Color(255, 255, 255));
         R1participant15.setText(" ");
+        R1participant15.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant16.setBackground(new java.awt.Color(255, 255, 255));
         R1participant16.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant16.setForeground(new java.awt.Color(255, 255, 255));
         R1participant16.setText(" ");
+        R1participant16.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant17.setBackground(new java.awt.Color(255, 255, 255));
         R1participant17.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant17.setForeground(new java.awt.Color(255, 255, 255));
         R1participant17.setText(" ");
+        R1participant17.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant18.setBackground(new java.awt.Color(255, 255, 255));
         R1participant18.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant18.setForeground(new java.awt.Color(255, 255, 255));
         R1participant18.setText(" ");
+        R1participant18.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant19.setBackground(new java.awt.Color(255, 255, 255));
         R1participant19.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant19.setForeground(new java.awt.Color(255, 255, 255));
         R1participant19.setText(" ");
+        R1participant19.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant20.setBackground(new java.awt.Color(255, 255, 255));
         R1participant20.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant20.setForeground(new java.awt.Color(255, 255, 255));
         R1participant20.setText(" ");
+        R1participant20.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant21.setBackground(new java.awt.Color(255, 255, 255));
         R1participant21.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant21.setForeground(new java.awt.Color(255, 255, 255));
         R1participant21.setText(" ");
+        R1participant21.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant22.setBackground(new java.awt.Color(255, 255, 255));
         R1participant22.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant22.setForeground(new java.awt.Color(255, 255, 255));
         R1participant22.setText(" ");
+        R1participant22.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant23.setBackground(new java.awt.Color(255, 255, 255));
         R1participant23.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant23.setForeground(new java.awt.Color(255, 255, 255));
         R1participant23.setText(" ");
+        R1participant23.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant24.setBackground(new java.awt.Color(255, 255, 255));
         R1participant24.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant24.setForeground(new java.awt.Color(255, 255, 255));
         R1participant24.setText(" ");
+        R1participant24.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant25.setBackground(new java.awt.Color(255, 255, 255));
         R1participant25.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant25.setForeground(new java.awt.Color(255, 255, 255));
         R1participant25.setText(" ");
+        R1participant25.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant26.setBackground(new java.awt.Color(255, 255, 255));
         R1participant26.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant26.setForeground(new java.awt.Color(255, 255, 255));
         R1participant26.setText(" ");
+        R1participant26.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant27.setBackground(new java.awt.Color(255, 255, 255));
         R1participant27.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant27.setForeground(new java.awt.Color(255, 255, 255));
         R1participant27.setText(" ");
+        R1participant27.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant28.setBackground(new java.awt.Color(255, 255, 255));
         R1participant28.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant28.setForeground(new java.awt.Color(255, 255, 255));
         R1participant28.setText(" ");
+        R1participant28.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant29.setBackground(new java.awt.Color(255, 255, 255));
         R1participant29.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant29.setForeground(new java.awt.Color(255, 255, 255));
         R1participant29.setText(" ");
+        R1participant29.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant30.setBackground(new java.awt.Color(255, 255, 255));
         R1participant30.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant30.setForeground(new java.awt.Color(255, 255, 255));
         R1participant30.setText(" ");
+        R1participant30.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1participant31.setBackground(new java.awt.Color(255, 255, 255));
         R1participant31.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R1participant31.setForeground(new java.awt.Color(255, 255, 255));
         R1participant31.setText(" ");
+        R1participant31.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R1points0.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         R1points0.setText(" ");
@@ -938,15 +1168,6 @@ public class TournaToolUI extends javax.swing.JFrame {
                 .addComponent(R1participant13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(R1points13, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(roundOf32_panelLayout.createSequentialGroup()
-                .addComponent(R1participant31, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(R1points31, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(roundOf32_panelLayout.createSequentialGroup()
-                .addComponent(R1participant30, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(R1points30, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, roundOf32_panelLayout.createSequentialGroup()
                 .addGroup(roundOf32_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(R1participant0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -955,6 +1176,14 @@ public class TournaToolUI extends javax.swing.JFrame {
                 .addGroup(roundOf32_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(R1points1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(R1points0, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, roundOf32_panelLayout.createSequentialGroup()
+                .addGroup(roundOf32_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(R1participant31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(R1participant30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(roundOf32_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(R1points30, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(R1points31, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         roundOf32_panelLayout.setVerticalGroup(
             roundOf32_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1004,7 +1233,7 @@ public class TournaToolUI extends javax.swing.JFrame {
                     .addComponent(R1points10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(roundOf32_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(R1participant11, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(R1participant11)
                     .addComponent(R1points11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(roundOf32_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1068,7 +1297,7 @@ public class TournaToolUI extends javax.swing.JFrame {
                     .addComponent(R1points26))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(roundOf32_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(R1participant27, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(R1participant27)
                     .addComponent(R1points27))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(roundOf32_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1080,64 +1309,80 @@ public class TournaToolUI extends javax.swing.JFrame {
                     .addComponent(R1points29))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(roundOf32_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(R1participant30, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(R1participant30)
                     .addComponent(R1points30))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(roundOf32_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(R1participant31, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(R1participant31)
                     .addComponent(R1points31)))
         );
 
-        roundOf16_panel.setBackground(new java.awt.Color(51, 0, 0));
+        roundOf16_panel.setBackground(new java.awt.Color(0, 0, 0));
         roundOf16_panel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         R2participant0.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R2participant0.setText(" ");
+        R2participant0.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R2participant1.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R2participant1.setText(" ");
+        R2participant1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R2participant2.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R2participant2.setText(" ");
+        R2participant2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R2participant3.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R2participant3.setText(" ");
+        R2participant3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R2participant4.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R2participant4.setText(" ");
+        R2participant4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R2participant5.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R2participant5.setText(" ");
+        R2participant5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R2participant6.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R2participant6.setText(" ");
+        R2participant6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R2participant7.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R2participant7.setText(" ");
+        R2participant7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R2participant8.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R2participant8.setText(" ");
+        R2participant8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R2participant9.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R2participant9.setText(" ");
+        R2participant9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R2participant10.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R2participant10.setText(" ");
+        R2participant10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R2participant11.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R2participant11.setText(" ");
+        R2participant11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R2participant12.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R2participant12.setText(" ");
+        R2participant12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R2participant13.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R2participant13.setText(" ");
+        R2participant13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R2participant14.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R2participant14.setText(" ");
+        R2participant14.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R2participant15.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R2participant15.setText(" ");
+        R2participant15.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0), new java.awt.Color(102, 0, 0)));
 
         R2points0.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         R2points0.setText(" ");
@@ -1207,42 +1452,6 @@ public class TournaToolUI extends javax.swing.JFrame {
         roundOf16_panelLayout.setHorizontalGroup(
             roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(roundOf16_panelLayout.createSequentialGroup()
-                .addComponent(R2participant0, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(R2points0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(roundOf16_panelLayout.createSequentialGroup()
-                .addComponent(R2participant1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(R2points1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(roundOf16_panelLayout.createSequentialGroup()
-                .addComponent(R2participant2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(R2points2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(roundOf16_panelLayout.createSequentialGroup()
-                .addComponent(R2participant3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(R2points3, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(roundOf16_panelLayout.createSequentialGroup()
-                .addComponent(R2participant4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(R2points4, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(roundOf16_panelLayout.createSequentialGroup()
-                .addComponent(R2participant5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(R2points5, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(roundOf16_panelLayout.createSequentialGroup()
-                .addComponent(R2participant6, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(R2points6, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(roundOf16_panelLayout.createSequentialGroup()
-                .addComponent(R2participant7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(R2points7, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(roundOf16_panelLayout.createSequentialGroup()
-                .addComponent(R2participant8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(R2points8, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(roundOf16_panelLayout.createSequentialGroup()
                 .addComponent(R2participant9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(R2points15, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1270,6 +1479,32 @@ public class TournaToolUI extends javax.swing.JFrame {
                 .addComponent(R2participant15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(R2points9, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, roundOf16_panelLayout.createSequentialGroup()
+                .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(R2participant1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(R2participant0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(R2points0, javax.swing.GroupLayout.DEFAULT_SIZE, 15, Short.MAX_VALUE)
+                    .addComponent(R2points1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, roundOf16_panelLayout.createSequentialGroup()
+                .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(R2participant8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(R2participant7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(R2participant6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(R2participant5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(R2participant4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(R2participant3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(R2participant2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(R2points2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(R2points3, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(R2points4, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(R2points5, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(R2points6, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(R2points7, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(R2points8, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         roundOf16_panelLayout.setVerticalGroup(
             roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1278,123 +1513,132 @@ public class TournaToolUI extends javax.swing.JFrame {
                 .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R2participant0)
                     .addComponent(R2points0))
-                .addGap(25, 25, 25)
+                .addGap(30, 30, 30)
                 .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R2participant1)
                     .addComponent(R2points1))
-                .addGap(28, 28, 28)
+                .addGap(30, 30, 30)
                 .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R2participant2)
                     .addComponent(R2points2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addGap(30, 30, 30)
                 .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R2participant3)
                     .addComponent(R2points3))
-                .addGap(27, 27, 27)
+                .addGap(30, 30, 30)
                 .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R2participant4)
                     .addComponent(R2points4))
-                .addGap(27, 27, 27)
+                .addGap(31, 31, 31)
                 .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R2participant5, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(R2points5))
-                .addGap(27, 27, 27)
-                .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(31, 31, 31)
+                .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(R2participant6)
                     .addComponent(R2points6))
-                .addGap(26, 26, 26)
-                .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(30, 30, 30)
+                .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(R2participant7)
                     .addComponent(R2points7))
-                .addGap(29, 29, 29)
-                .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(31, 31, 31)
+                .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(R2participant8)
                     .addComponent(R2points8))
-                .addGap(27, 27, 27)
+                .addGap(31, 31, 31)
                 .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R2participant15)
                     .addComponent(R2points9))
-                .addGap(26, 26, 26)
+                .addGap(30, 30, 30)
                 .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R2participant14)
                     .addComponent(R2points10))
-                .addGap(25, 25, 25)
+                .addGap(30, 30, 30)
                 .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R2participant13)
                     .addComponent(R2points11))
-                .addGap(27, 27, 27)
+                .addGap(30, 30, 30)
                 .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R2participant12)
                     .addComponent(R2points12))
-                .addGap(28, 28, 28)
+                .addGap(30, 30, 30)
                 .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R2participant11)
                     .addComponent(R2points13))
-                .addGap(28, 28, 28)
+                .addGap(30, 30, 30)
                 .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R2participant10)
                     .addComponent(R2points14))
-                .addGap(25, 25, 25)
+                .addGap(30, 30, 30)
                 .addGroup(roundOf16_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R2participant9)
                     .addComponent(R2points15))
-                .addContainerGap())
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
-        quarterFinals_panel.setBackground(new java.awt.Color(51, 0, 0));
+        quarterFinals_panel.setBackground(new java.awt.Color(0, 0, 0));
         quarterFinals_panel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         R3participant0.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
-        R3participant0.setForeground(new java.awt.Color(153, 153, 153));
-
-        R3points0.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        R3points0.setText(" ");
-
-        R3participant1.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
-        R3participant1.setForeground(new java.awt.Color(255, 255, 255));
-        R3participant1.setText(" ");
-
-        R3points1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        R3points1.setText(" ");
+        R3participant0.setForeground(new java.awt.Color(255, 255, 255));
+        R3participant0.setText(" ");
+        R3participant0.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0)));
 
         R3participant2.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R3participant2.setForeground(new java.awt.Color(255, 255, 255));
         R3participant2.setText(" ");
-
-        R3points2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        R3points2.setText(" ");
+        R3participant2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0)));
 
         R3participant3.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R3participant3.setForeground(new java.awt.Color(255, 255, 255));
         R3participant3.setText(" ");
-
-        R3points3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        R3points3.setText(" ");
+        R3participant3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0)));
 
         R3participant4.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R3participant4.setForeground(new java.awt.Color(255, 255, 255));
         R3participant4.setText(" ");
-
-        R3points4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        R3points4.setText(" ");
+        R3participant4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0)));
 
         R3participant5.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R3participant5.setForeground(new java.awt.Color(255, 255, 255));
         R3participant5.setText(" ");
-
-        R3points5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        R3points5.setText(" ");
+        R3participant5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0)));
 
         R3participant6.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R3participant6.setForeground(new java.awt.Color(255, 255, 255));
         R3participant6.setText(" ");
-
-        R3points6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        R3points6.setText(" ");
+        R3participant6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0)));
 
         R3participant7.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R3participant7.setForeground(new java.awt.Color(255, 255, 255));
         R3participant7.setText(" ");
+        R3participant7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0)));
+
+        R3participant1.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
+        R3participant1.setForeground(new java.awt.Color(255, 255, 255));
+        R3participant1.setText(" ");
+        R3participant1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0)));
+
+        R3points0.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        R3points0.setText(" ");
+
+        R3points1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        R3points1.setText(" ");
+
+        R3points2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        R3points2.setText(" ");
+
+        R3points3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        R3points3.setText(" ");
+
+        R3points4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        R3points4.setText(" ");
+
+        R3points5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        R3points5.setText(" ");
+
+        R3points6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        R3points6.setText(" ");
 
         R3points7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         R3points7.setText(" ");
@@ -1404,71 +1648,59 @@ public class TournaToolUI extends javax.swing.JFrame {
         quarterFinals_panelLayout.setHorizontalGroup(
             quarterFinals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(quarterFinals_panelLayout.createSequentialGroup()
-                .addComponent(R3participant0, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(R3points0, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(quarterFinals_panelLayout.createSequentialGroup()
-                .addComponent(R3participant1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(R3points1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(quarterFinals_panelLayout.createSequentialGroup()
-                .addComponent(R3participant2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(R3points2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(quarterFinals_panelLayout.createSequentialGroup()
-                .addComponent(R3participant3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(R3points3, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, quarterFinals_panelLayout.createSequentialGroup()
-                .addGroup(quarterFinals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(R3participant5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(R3participant4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(quarterFinals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(R3participant7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
+                    .addComponent(R3participant6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(R3participant5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(R3participant4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(R3participant3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(R3participant2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(R3participant1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(R3participant0, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(quarterFinals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(R3points0, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(R3points1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(R3points2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(R3points3, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(R3points4, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(R3points5, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addGroup(quarterFinals_panelLayout.createSequentialGroup()
-                .addComponent(R3participant6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(R3points6, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(quarterFinals_panelLayout.createSequentialGroup()
-                .addComponent(R3participant7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(R3points7, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(R3points5, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(R3points6, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(R3points7, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         quarterFinals_panelLayout.setVerticalGroup(
             quarterFinals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(quarterFinals_panelLayout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addGap(37, 37, 37)
                 .addGroup(quarterFinals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R3participant0)
                     .addComponent(R3points0))
-                .addGap(69, 69, 69)
+                .addGap(78, 78, 78)
                 .addGroup(quarterFinals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R3participant1)
                     .addComponent(R3points1))
-                .addGap(69, 69, 69)
+                .addGap(78, 78, 78)
                 .addGroup(quarterFinals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(R3participant2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(R3participant2)
                     .addComponent(R3points2))
-                .addGap(69, 69, 69)
+                .addGap(78, 78, 78)
                 .addGroup(quarterFinals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R3participant3)
                     .addComponent(R3points3))
-                .addGap(69, 69, 69)
+                .addGap(80, 80, 80)
                 .addGroup(quarterFinals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R3participant4)
                     .addComponent(R3points4))
-                .addGap(69, 69, 69)
+                .addGap(78, 78, 78)
                 .addGroup(quarterFinals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R3participant5)
                     .addComponent(R3points5))
-                .addGap(69, 69, 69)
+                .addGap(78, 78, 78)
                 .addGroup(quarterFinals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R3participant6)
                     .addComponent(R3points6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addGap(79, 79, 79)
                 .addGroup(quarterFinals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R3participant7)
                     .addComponent(R3points7))
@@ -1476,37 +1708,41 @@ public class TournaToolUI extends javax.swing.JFrame {
         );
 
         roundOd16_txt.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
-        roundOd16_txt.setForeground(new java.awt.Color(255, 102, 102));
+        roundOd16_txt.setForeground(new java.awt.Color(102, 0, 0));
         roundOd16_txt.setText("Round of 16");
 
         quaterFinals_txt.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
-        quaterFinals_txt.setForeground(new java.awt.Color(255, 102, 102));
+        quaterFinals_txt.setForeground(new java.awt.Color(153, 0, 0));
         quaterFinals_txt.setText("Quarter-Finals");
 
-        semiFinals_panel.setBackground(new java.awt.Color(51, 0, 0));
+        semiFinals_panel.setBackground(new java.awt.Color(0, 0, 0));
         semiFinals_panel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         semiFinals_panel.setForeground(new java.awt.Color(51, 0, 0));
 
         R4participant0.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R4participant0.setText(" ");
+        R4participant0.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0)));
 
         R4points0.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         R4points0.setText(" ");
 
         R4participant1.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R4participant1.setText(" ");
+        R4participant1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0)));
 
         R4points1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         R4points1.setText(" ");
 
         R4participant2.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R4participant2.setText(" ");
+        R4participant2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0)));
 
         R4points2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         R4points2.setText(" ");
 
         R4participant3.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         R4participant3.setText(" ");
+        R4participant3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0), new java.awt.Color(153, 0, 0)));
 
         R4points3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         R4points3.setText(" ");
@@ -1520,7 +1756,7 @@ public class TournaToolUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(R4points0, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(semiFinals_panelLayout.createSequentialGroup()
-                .addComponent(R4participant1, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                .addComponent(R4participant1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(R4points1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(semiFinals_panelLayout.createSequentialGroup()
@@ -1535,31 +1771,32 @@ public class TournaToolUI extends javax.swing.JFrame {
         semiFinals_panelLayout.setVerticalGroup(
             semiFinals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(semiFinals_panelLayout.createSequentialGroup()
-                .addGap(71, 71, 71)
+                .addGap(85, 85, 85)
                 .addGroup(semiFinals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R4participant0)
                     .addComponent(R4points0))
-                .addGap(153, 153, 153)
+                .addGap(176, 176, 176)
                 .addGroup(semiFinals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R4participant1)
                     .addComponent(R4points1))
-                .addGap(154, 154, 154)
+                .addGap(176, 176, 176)
                 .addGroup(semiFinals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R4participant2)
                     .addComponent(R4points2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(176, 176, 176)
                 .addGroup(semiFinals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R4participant3)
                     .addComponent(R4points3))
                 .addGap(77, 77, 77))
         );
 
-        finals_panel.setBackground(new java.awt.Color(51, 0, 0));
+        finals_panel.setBackground(new java.awt.Color(0, 0, 0));
         finals_panel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         R5participant0.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         R5participant0.setForeground(new java.awt.Color(255, 255, 255));
         R5participant0.setText(" ");
+        R5participant0.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 0, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(255, 0, 0)));
 
         R5points0.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         R5points0.setText(" ");
@@ -1567,6 +1804,7 @@ public class TournaToolUI extends javax.swing.JFrame {
         R5participant1.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         R5participant1.setForeground(new java.awt.Color(255, 255, 255));
         R5participant1.setText(" ");
+        R5participant1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 0, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(255, 0, 0)));
 
         R5points1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         R5points1.setText(" ");
@@ -1576,7 +1814,7 @@ public class TournaToolUI extends javax.swing.JFrame {
         finals_panelLayout.setHorizontalGroup(
             finals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(finals_panelLayout.createSequentialGroup()
-                .addComponent(R5participant0, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                .addComponent(R5participant0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(R5points0, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(finals_panelLayout.createSequentialGroup()
@@ -1587,31 +1825,32 @@ public class TournaToolUI extends javax.swing.JFrame {
         finals_panelLayout.setVerticalGroup(
             finals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(finals_panelLayout.createSequentialGroup()
-                .addGap(154, 154, 154)
+                .addGap(180, 180, 180)
                 .addGroup(finals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R5participant0)
                     .addComponent(R5points0))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 324, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(finals_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(R5participant1)
                     .addComponent(R5points1))
-                .addGap(163, 163, 163))
+                .addGap(200, 200, 200))
         );
 
         semiFinals_txt.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
-        semiFinals_txt.setForeground(new java.awt.Color(255, 102, 102));
+        semiFinals_txt.setForeground(new java.awt.Color(153, 0, 0));
         semiFinals_txt.setText("Semi-Finals");
 
         finals_txt.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
-        finals_txt.setForeground(new java.awt.Color(255, 51, 51));
+        finals_txt.setForeground(new java.awt.Color(255, 0, 0));
         finals_txt.setText("Finals");
 
-        winners_panel.setBackground(new java.awt.Color(51, 0, 0));
+        winners_panel.setBackground(new java.awt.Color(0, 0, 0));
         winners_panel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         winner.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        winner.setForeground(new java.awt.Color(255, 204, 0));
+        winner.setForeground(new java.awt.Color(255, 255, 255));
         winner.setText(" ");
+        winner.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 204, 0), new java.awt.Color(255, 204, 0), new java.awt.Color(255, 204, 0), new java.awt.Color(255, 204, 0)));
 
         javax.swing.GroupLayout winners_panelLayout = new javax.swing.GroupLayout(winners_panel);
         winners_panel.setLayout(winners_panelLayout);
@@ -1622,14 +1861,14 @@ public class TournaToolUI extends javax.swing.JFrame {
         winners_panelLayout.setVerticalGroup(
             winners_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(winners_panelLayout.createSequentialGroup()
-                .addGap(324, 324, 324)
+                .addGap(374, 374, 374)
                 .addComponent(winner)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        winner_txt.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
-        winner_txt.setForeground(new java.awt.Color(255, 255, 102));
-        winner_txt.setText("Winner");
+        winner_txt1.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
+        winner_txt1.setForeground(new java.awt.Color(255, 204, 0));
+        winner_txt1.setText("Winner");
 
         javax.swing.GroupLayout knockoutTournament_panelLayout = new javax.swing.GroupLayout(knockoutTournament_panel);
         knockoutTournament_panel.setLayout(knockoutTournament_panelLayout);
@@ -1638,356 +1877,140 @@ public class TournaToolUI extends javax.swing.JFrame {
             .addGroup(knockoutTournament_panelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(knockoutTournament_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(knockoutTournament_panelLayout.createSequentialGroup()
-                        .addComponent(roundOf32_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(roundOf16_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(knockoutTournament_panelLayout.createSequentialGroup()
-                        .addComponent(roundOf32_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(roundOd16_txt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(18, 18, 18)
+                    .addComponent(roundOf32_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(roundOf32_txt, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))
+                .addGap(19, 19, 19)
                 .addGroup(knockoutTournament_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(knockoutTournament_panelLayout.createSequentialGroup()
-                        .addComponent(quarterFinals_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(semiFinals_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(knockoutTournament_panelLayout.createSequentialGroup()
-                        .addComponent(quaterFinals_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(semiFinals_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(roundOd16_txt, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                    .addComponent(roundOf16_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(19, 19, 19)
+                .addGroup(knockoutTournament_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(quaterFinals_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(quarterFinals_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addGroup(knockoutTournament_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(knockoutTournament_panelLayout.createSequentialGroup()
-                        .addComponent(finals_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(winners_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(knockoutTournament_panelLayout.createSequentialGroup()
-                        .addComponent(finals_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(winner_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(semiFinals_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(semiFinals_txt, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))
+                .addGap(19, 19, 19)
+                .addGroup(knockoutTournament_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(finals_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(finals_txt, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))
+                .addGap(19, 19, 19)
+                .addGroup(knockoutTournament_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(winners_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(winner_txt1, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))
+                .addContainerGap())
         );
         knockoutTournament_panelLayout.setVerticalGroup(
             knockoutTournament_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, knockoutTournament_panelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(knockoutTournament_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(roundOf32_txt)
-                    .addComponent(roundOd16_txt)
-                    .addComponent(quaterFinals_txt)
-                    .addComponent(semiFinals_txt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(finals_txt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(winner_txt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(knockoutTournament_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(roundOf32_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(roundOf16_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(quarterFinals_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(semiFinals_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(finals_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(knockoutTournament_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(knockoutTournament_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(roundOf32_txt)
+                        .addComponent(roundOd16_txt)
+                        .addComponent(quaterFinals_txt)
+                        .addComponent(finals_txt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(winner_txt1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(semiFinals_txt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(knockoutTournament_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(finals_panel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(semiFinals_panel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(quarterFinals_panel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(roundOf16_panel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(roundOf32_panel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(winners_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addGap(0, 0, 0))
         );
 
-        knockout_ScrollPanel.setViewportView(knockoutTournament_panel);
+        bracket_ScrollPane.setViewportView(knockoutTournament_panel);
 
-        javax.swing.GroupLayout knockout_panelLayout = new javax.swing.GroupLayout(knockout_panel);
-        knockout_panel.setLayout(knockout_panelLayout);
-        knockout_panelLayout.setHorizontalGroup(
-            knockout_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(knockout_ScrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 618, Short.MAX_VALUE)
-        );
-        knockout_panelLayout.setVerticalGroup(
-            knockout_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(knockout_ScrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 447, Short.MAX_VALUE)
-        );
+        mainTabbed.addTab("BRACKET", bracket_ScrollPane);
 
-        createTabbed.addTab("Bracket", knockout_panel);
+        main_panel8.setBackground(new java.awt.Color(0, 0, 0));
+        main_panel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        javax.swing.GroupLayout create_panelLayout = new javax.swing.GroupLayout(create_panel);
-        create_panel.setLayout(create_panelLayout);
-        create_panelLayout.setHorizontalGroup(
-            create_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(createTabbed)
-        );
-        create_panelLayout.setVerticalGroup(
-            create_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(createTabbed)
-        );
+        appLogo_img8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inAppLogo.png"))); // NOI18N
 
-        mainTabbed.addTab("CREATE", create_panel);
+        create_txt8.setFont(new java.awt.Font("Verdana", 2, 12)); // NOI18N
+        create_txt8.setForeground(new java.awt.Color(255, 102, 102));
+        create_txt8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        create_txt8.setText("CREATE:");
 
-        manage_panel.setBackground(new java.awt.Color(51, 0, 0));
-        manage_panel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        manage_txt8.setFont(new java.awt.Font("Verdana", 2, 12)); // NOI18N
+        manage_txt8.setForeground(new java.awt.Color(255, 102, 102));
+        manage_txt8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        manage_txt8.setText("BRACKET");
 
-        jButton4.setText("jButton4");
+        setting_txt8.setFont(new java.awt.Font("Verdana", 2, 12)); // NOI18N
+        setting_txt8.setForeground(new java.awt.Color(255, 102, 102));
+        setting_txt8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        setting_txt8.setText("SETTINGS:");
 
-        jButton5.setText("jButton4");
+        feedback_txt8.setFont(new java.awt.Font("Verdana", 2, 12)); // NOI18N
+        feedback_txt8.setForeground(new java.awt.Color(255, 102, 102));
+        feedback_txt8.setText("FEEDBACK:");
 
-        jButton7.setText("jButton4");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        exit_button8.setBackground(new java.awt.Color(255, 0, 0));
+        exit_button8.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        exit_button8.setText("HOME");
+        exit_button8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                exit_button8ActionPerformed(evt);
             }
         });
 
-        jButton8.setText("jButton4");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-
-        jButton9.setText("jButton4");
-
-        jButton10.setText("jButton4");
-
-        jButton11.setText("jButton4");
-
-        jButton12.setText("jButton4");
-
-        jLabel1.setText("jLabel1");
-
-        jLabel2.setText("jLabel1");
-
-        jLabel3.setText("jLabel1");
-
-        jLabel4.setText("jLabel1");
-
-        jLabel5.setText("jLabel1");
-
-        jLabel6.setText("jLabel1");
-
-        jLabel7.setText("jLabel1");
-
-        jLabel8.setText("jLabel1");
-
-        javax.swing.GroupLayout manage_panelLayout = new javax.swing.GroupLayout(manage_panel);
-        manage_panel.setLayout(manage_panelLayout);
-        manage_panelLayout.setHorizontalGroup(
-            manage_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(manage_panelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(manage_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(manage_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(manage_panelLayout.createSequentialGroup()
-                        .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(manage_panelLayout.createSequentialGroup()
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(manage_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-            .addGroup(manage_panelLayout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(68, 68, 68)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39))
-            .addGroup(manage_panelLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(70, 70, 70)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(74, 74, 74)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39))
-        );
-        manage_panelLayout.setVerticalGroup(
-            manage_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(manage_panelLayout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
-                .addGroup(manage_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, manage_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(manage_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, manage_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
-                        .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jButton8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
-                .addGroup(manage_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(manage_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(manage_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
-                        .addComponent(jButton11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
-
-        mainTabbed.addTab("MANAGE", manage_panel);
-
-        settings_panel.setBackground(new java.awt.Color(51, 0, 0));
-
-        javax.swing.GroupLayout settings_panelLayout = new javax.swing.GroupLayout(settings_panel);
-        settings_panel.setLayout(settings_panelLayout);
-        settings_panelLayout.setHorizontalGroup(
-            settings_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
-        );
-        settings_panelLayout.setVerticalGroup(
-            settings_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 452, Short.MAX_VALUE)
-        );
-
-        mainTabbed.addTab("SETTINGS", settings_panel);
-
-        feedback_panel.setBackground(new java.awt.Color(51, 0, 0));
-
-        creator_txt.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
-        creator_txt.setForeground(new java.awt.Color(255, 102, 102));
-        creator_txt.setText("CREATOR:");
-
-        myName_txt.setBackground(new java.awt.Color(255, 255, 255));
-        myName_txt.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
-        myName_txt.setForeground(new java.awt.Color(255, 255, 255));
-        myName_txt.setText("Saien Naidu");
-
-        contact1_txt.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
-        contact1_txt.setForeground(new java.awt.Color(255, 102, 102));
-        contact1_txt.setText("if you have any problems, suggests or just want to chat!");
-
-        myEmail_txt.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
-        myEmail_txt.setForeground(new java.awt.Color(255, 255, 255));
-        myEmail_txt.setText("saien.naidu@reddam.house");
-
-        contact0_txt.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
-        contact0_txt.setForeground(new java.awt.Color(255, 102, 102));
-        contact0_txt.setText("Please contact me at:");
-
-        javax.swing.GroupLayout feedback_panelLayout = new javax.swing.GroupLayout(feedback_panel);
-        feedback_panel.setLayout(feedback_panelLayout);
-        feedback_panelLayout.setHorizontalGroup(
-            feedback_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(feedback_panelLayout.createSequentialGroup()
-                .addGroup(feedback_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(feedback_panelLayout.createSequentialGroup()
-                        .addGap(290, 290, 290)
-                        .addComponent(contact0_txt))
-                    .addGroup(feedback_panelLayout.createSequentialGroup()
-                        .addGap(320, 320, 320)
-                        .addComponent(creator_txt))
-                    .addGroup(feedback_panelLayout.createSequentialGroup()
-                        .addGap(272, 272, 272)
-                        .addComponent(myName_txt))
-                    .addGroup(feedback_panelLayout.createSequentialGroup()
-                        .addGap(264, 264, 264)
-                        .addComponent(myEmail_txt))
-                    .addGroup(feedback_panelLayout.createSequentialGroup()
-                        .addGap(196, 196, 196)
-                        .addComponent(contact1_txt)))
-                .addContainerGap(181, Short.MAX_VALUE))
-        );
-        feedback_panelLayout.setVerticalGroup(
-            feedback_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(feedback_panelLayout.createSequentialGroup()
-                .addGap(121, 121, 121)
-                .addComponent(creator_txt)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(myName_txt)
-                .addGap(91, 91, 91)
-                .addComponent(contact0_txt)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(myEmail_txt)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(contact1_txt)
-                .addContainerGap(132, Short.MAX_VALUE))
-        );
-
-        mainTabbed.addTab("FEEDBACK", feedback_panel);
-
-        main_panel.setBackground(new java.awt.Color(0, 0, 0));
-        main_panel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        appLogo_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inAppLogo.png"))); // NOI18N
-
-        create_txt.setFont(new java.awt.Font("Verdana", 2, 12)); // NOI18N
-        create_txt.setForeground(new java.awt.Color(255, 102, 102));
-        create_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        create_txt.setText("CREATE:");
-
-        manage_txt.setFont(new java.awt.Font("Verdana", 2, 12)); // NOI18N
-        manage_txt.setForeground(new java.awt.Color(255, 102, 102));
-        manage_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        manage_txt.setText("MANAGE:");
-
-        setting_txt.setFont(new java.awt.Font("Verdana", 2, 12)); // NOI18N
-        setting_txt.setForeground(new java.awt.Color(255, 102, 102));
-        setting_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        setting_txt.setText("SETTINGS:");
-
-        feedback_txt.setFont(new java.awt.Font("Verdana", 2, 12)); // NOI18N
-        feedback_txt.setForeground(new java.awt.Color(255, 102, 102));
-        feedback_txt.setText("FEEDBACK:");
-
-        exit_button.setBackground(new java.awt.Color(255, 102, 102));
-        exit_button.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        exit_button.setText("EXIT");
-        exit_button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exit_buttonActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout main_panelLayout = new javax.swing.GroupLayout(main_panel);
-        main_panel.setLayout(main_panelLayout);
-        main_panelLayout.setHorizontalGroup(
-            main_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(main_panelLayout.createSequentialGroup()
+        javax.swing.GroupLayout main_panel8Layout = new javax.swing.GroupLayout(main_panel8);
+        main_panel8.setLayout(main_panel8Layout);
+        main_panel8Layout.setHorizontalGroup(
+            main_panel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(main_panel8Layout.createSequentialGroup()
                 .addGap(38, 38, 38)
-                .addGroup(main_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(feedback_txt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(setting_txt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(manage_txt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(create_txt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(main_panel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(feedback_txt8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(setting_txt8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(manage_txt8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(create_txt8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(exit_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, main_panelLayout.createSequentialGroup()
+            .addComponent(exit_button8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, main_panel8Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(appLogo_img, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(appLogo_img8, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        main_panelLayout.setVerticalGroup(
-            main_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(main_panelLayout.createSequentialGroup()
+        main_panel8Layout.setVerticalGroup(
+            main_panel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(main_panel8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(appLogo_img, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(appLogo_img8, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(create_txt)
+                .addComponent(create_txt8)
                 .addGap(60, 60, 60)
-                .addComponent(manage_txt)
+                .addComponent(manage_txt8)
                 .addGap(60, 60, 60)
-                .addComponent(setting_txt)
+                .addComponent(setting_txt8)
                 .addGap(60, 60, 60)
-                .addComponent(feedback_txt)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(exit_button))
+                .addComponent(feedback_txt8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addComponent(exit_button8))
+        );
+
+        javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
+        mainPanel.setLayout(mainPanelLayout);
+        mainPanelLayout.setHorizontalGroup(
+            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 148, Short.MAX_VALUE)
+            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(mainPanelLayout.createSequentialGroup()
+                    .addComponent(main_panel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        mainPanelLayout.setVerticalGroup(
+            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(main_panel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1995,197 +2018,54 @@ public class TournaToolUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(main_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(mainTabbed))
+                .addComponent(mainTabbed, javax.swing.GroupLayout.DEFAULT_SIZE, 705, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainTabbed)
-            .addComponent(main_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainTabbed, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
+            .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void mainTabbedPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_mainTabbedPropertyChange
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mainTabbedPropertyChange
-
-    private void rating_choiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rating_choiceActionPerformed
-        // TODO add your handling code here:
-        
-        choice = BackEnd.ScoreMetric.ratingChoice_method(choice);
-    }//GEN-LAST:event_rating_choiceActionPerformed
-
-    private void winORlose_choiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_winORlose_choiceActionPerformed
-        // TODO add your handling code here:
-        
-        choice = BackEnd.ScoreMetric.winORLoseChoice_method(choice);
-    }//GEN-LAST:event_winORlose_choiceActionPerformed
-
-    private void time_choiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_time_choiceActionPerformed
-        // TODO add your handling code here:
-        
-        choice = BackEnd.ScoreMetric.timeChoice_method(choice);
-    }//GEN-LAST:event_time_choiceActionPerformed
-
-    private void points_choiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_points_choiceActionPerformed
-        // TODO add your handling code here:
-        
-       choice = BackEnd.ScoreMetric.pointChoice_method(choice);
-    }//GEN-LAST:event_points_choiceActionPerformed
-
-    private void participants_txtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_participants_txtFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_participants_txtFieldActionPerformed
-
-    private void continue_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continue_buttonActionPerformed
-        // TODO add your handling code here:
-        
-        String tournamentName = title_TxtFld.getText();      
+    private void exit_button8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exit_button8ActionPerformed
         try {
-            
-            int maxParticipants = (int) participants_spinner.getValue();
-            int startingRound = BackEnd.StartingRound.getStartingRound(maxParticipants);
-            
-            
-            
-            if (startingRound == 1){
-                
-                R1participant0.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 1));
-                R1participant1.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 2));  
-                R1participant2.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 3));  
-                R1participant3.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 4));  
-                R1participant4.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 5));  
-                R1participant5.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 6));  
-                R1participant6.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 7));  
-                R1participant7.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 8));  
-                R1participant8.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 9));  
-                R1participant9.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 10));  
-                R1participant10.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 11));  
-                R1participant11.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 12));  
-                R1participant12.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 13));  
-                R1participant13.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 14));  
-                R1participant14.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 15));  
-                R1participant15.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 16));  
-                R1participant16.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 17));  
-                R1participant17.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 18));  
-                R1participant18.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 19));  
-                R1participant19.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 20));  
-                R1participant20.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 21));  
-                R1participant21.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 22));  
-                R1participant22.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 23));  
-                R1participant23.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 24));  
-                R1participant24.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 25));  
-                R1participant25.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 26));  
-                R1participant26.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 27));  
-                R1participant27.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 28));  
-                R1participant28.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 29));  
-                R1participant29.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 30));  
-                R1participant30.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 31));  
-                R1participant31.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 1, 32)); 
-                
-            }
-            
-            if (startingRound == 2) {
-                
-                R2participant0.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 2, 1));
-                R2participant1.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 2, 2));
-                R2participant2.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 2, 3));
-                R2participant3.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 2, 4));
-                R2participant4.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 2, 5));
-                R2participant5.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 2, 6));
-                R2participant6.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 2, 7));
-                R2participant7.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 2, 8));
-                R2participant8.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 2, 9));
-                R2participant9.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 2, 10));
-                R2participant10.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 2, 11));
-                R2participant11.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 2, 12));
-                R2participant12.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 2, 13));
-                R2participant13.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 2, 14));
-                R2participant14.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 2, 15));
-                R2participant15.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 2, 16));
-                
-            }
-            
-            if (startingRound == 3) {
-                
-                R3participant0.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 3, 1));
-                R3participant1.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 3, 2));
-                R3participant2.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 3, 3));
-                R3participant3.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 3, 4));
-                R3participant4.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 3, 5));
-                R3participant5.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 3, 6));
-                R3participant6.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 3, 7));
-                R3participant7.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 3, 8));
-                
-            }
-            
-            if (startingRound == 4) {
-                
-                R4participant0.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 4, 1));
-                R4participant1.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 4, 2));
-                R4participant2.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 4, 3));
-                R4participant3.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 4, 4));
-                
-            }
-            
-            if (startingRound == 5) {
-                
-                R5participant0.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 5, 1));
-                R5participant1.setText(BackEnd.InitializeBracket.getParticipants(tournamentName, 5, 2));
-                
-            }
-        
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(TournaToolUI.class.getName()).log(Level.SEVERE, null, ex);
+            TournaTool_UI tournatool_frame = new TournaTool_UI();
+            tournatool_frame.show();
+            dispose();
         } catch (IOException ex) {
-            Logger.getLogger(TournaToolUI.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TournaTool_UI.class.getName()).log(Level.SEVERE, null, ex);
         }
-       
-    }//GEN-LAST:event_continue_buttonActionPerformed
+    }//GEN-LAST:event_exit_button8ActionPerformed
 
-    private void displayImage_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_displayImage_buttonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_displayImage_buttonActionPerformed
-
-    private void title_TxtFldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_title_TxtFldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_title_TxtFldActionPerformed
-
-    private void participants_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_participants_buttonMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_participants_buttonMouseClicked
-
-    private void participants_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_participants_buttonActionPerformed
-        // TODO add your handling code here:
-
-        String tournament = title_TxtFld.getText();
-        String participantName = participants_txtField.getText();
-        int maxParticipants = (int) participants_spinner.getValue();
-        
-        if (participantsAdded < maxParticipants){
-            try {
-                participants_txtArea.append(BackEnd.WriteParticipants.addParticipant(tournament, participantName, maxParticipants) + "\n");
-            } catch (IOException ex) {
-                Logger.getLogger(TournaToolUI.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            participantsAdded++;
+    private void confirm_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirm_buttonActionPerformed
+        try {
+            // TODO add your handling code here:
+            winnerName_txt.setText(getWinner());
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(SavedTournament0_UI.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_participants_buttonActionPerformed
+    }//GEN-LAST:event_confirm_buttonActionPerformed
 
-    private void exit_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exit_buttonActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_exit_buttonActionPerformed
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void participantLeftScore_txtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_participantLeftScore_txtFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_participantLeftScore_txtFieldActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void proceed_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proceed_buttonActionPerformed
+        try {
+            // TODO add your handling code here:
+            proceed();
+        } catch (IOException ex) {
+            Logger.getLogger(SavedTournament0_UI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_proceed_buttonActionPerformed
+
+    private void participantRightScore_txtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_participantRightScore_txtFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_participantRightScore_txtFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2196,33 +2076,30 @@ public class TournaToolUI extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(TournaToolUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(TournaToolUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(TournaToolUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(TournaToolUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-        //</editor-fold>
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(SavedTournament0_UI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(SavedTournament0_UI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(SavedTournament0_UI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(SavedTournament0_UI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                    new TournaToolUI().setVisible(true);
-                } catch (FileNotFoundException ex) {
-                    Logger.getLogger(TournaToolUI.class.getName()).log(Level.SEVERE, null, ex);
-                }
+        java.awt.EventQueue.invokeLater(() -> {
+            try {
+                new SavedTournament0_UI().setVisible(true);
+            } catch (IOException ex) {
+                Logger.getLogger(SavedTournament0_UI.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
     }
@@ -2352,89 +2229,39 @@ public class TournaToolUI extends javax.swing.JFrame {
     private javax.swing.JLabel R5participant1;
     private javax.swing.JLabel R5points0;
     private javax.swing.JLabel R5points1;
-    private javax.swing.JLabel appLogo_img;
-    private javax.swing.JPanel basicInfo_panel;
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JLabel contact0_txt;
-    private javax.swing.JLabel contact1_txt;
-    private javax.swing.JButton continue_button;
-    private javax.swing.JTabbedPane createTabbed;
-    private javax.swing.JPanel create_panel;
-    private javax.swing.JLabel create_txt;
-    private javax.swing.JLabel creator_txt;
-    private javax.swing.JButton displayImage_button;
-    private javax.swing.JLabel displayImage_img;
-    private javax.swing.JLabel displayImage_txt;
-    private javax.swing.JButton exit_button;
-    private javax.swing.JPanel feedback_panel;
-    private javax.swing.JLabel feedback_txt;
+    private javax.swing.JLabel appLogo_img8;
+    private javax.swing.JScrollPane bracket_ScrollPane;
+    private javax.swing.JButton confirm_button;
+    private javax.swing.JLabel create_txt8;
+    private javax.swing.JButton exit_button8;
+    private javax.swing.JLabel feedback_txt8;
     private javax.swing.JPanel finals_panel;
     private javax.swing.JLabel finals_txt;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel65;
-    private javax.swing.JLabel jLabel66;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JToolBar jToolBar1;
     private javax.swing.JPanel knockoutTournament_panel;
-    private javax.swing.JScrollPane knockout_ScrollPanel;
-    private javax.swing.JPanel knockout_panel;
+    private javax.swing.JPanel mainPanel;
     private javax.swing.JTabbedPane mainTabbed;
-    private javax.swing.JPanel main_panel;
-    private javax.swing.JPanel manage_panel;
-    private javax.swing.JLabel manage_txt;
-    private javax.swing.JLabel maxParticipants_txt;
-    private javax.swing.JLabel myEmail_txt;
-    private javax.swing.JLabel myName_txt;
-    private javax.swing.JButton participants_button;
-    private javax.swing.JSpinner participants_spinner;
-    private javax.swing.JLabel participants_txt;
-    private javax.swing.JTextArea participants_txtArea;
-    private javax.swing.JTextField participants_txtField;
-    private javax.swing.JRadioButton points_choice;
+    private javax.swing.JPanel main_panel8;
+    private javax.swing.JLabel manage_txt8;
+    private javax.swing.JTextField participantLeftScore_txtField;
+    private javax.swing.JLabel participantLeft_txt;
+    private javax.swing.JTextField participantRightScore_txtField;
+    private javax.swing.JLabel participantRight_txt;
+    private javax.swing.JPanel proceed_LOWpanel;
+    private javax.swing.JPanel proceed_UPpanel;
+    private javax.swing.JButton proceed_button;
     private javax.swing.JPanel quarterFinals_panel;
     private javax.swing.JLabel quaterFinals_txt;
-    private javax.swing.JRadioButton rating_choice;
     private javax.swing.JLabel roundOd16_txt;
     private javax.swing.JPanel roundOf16_panel;
     private javax.swing.JPanel roundOf32_panel;
     private javax.swing.JLabel roundOf32_txt;
-    private javax.swing.JPanel scoreMetric_panel;
-    private javax.swing.JLabel scoreMetric_txt;
     private javax.swing.JPanel semiFinals_panel;
     private javax.swing.JLabel semiFinals_txt;
-    private javax.swing.JLabel setting_txt;
-    private javax.swing.JPanel settings_panel;
-    private javax.swing.JRadioButton time_choice;
-    private javax.swing.JTextField title_TxtFld;
-    private javax.swing.JLabel title_txt;
-    private javax.swing.JRadioButton winORlose_choice;
+    private javax.swing.JLabel setting_txt8;
     private javax.swing.JLabel winner;
+    private javax.swing.JLabel winnerName_txt;
     private javax.swing.JLabel winner_txt;
+    private javax.swing.JLabel winner_txt1;
     private javax.swing.JPanel winners_panel;
     // End of variables declaration//GEN-END:variables
 }
