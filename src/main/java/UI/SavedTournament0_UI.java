@@ -623,10 +623,6 @@ public class SavedTournament0_UI extends javax.swing.JFrame {
         mainPanel = new javax.swing.JPanel();
         main_panel8 = new javax.swing.JPanel();
         appLogo_img8 = new javax.swing.JLabel();
-        create_txt8 = new javax.swing.JLabel();
-        manage_txt8 = new javax.swing.JLabel();
-        setting_txt8 = new javax.swing.JLabel();
-        feedback_txt8 = new javax.swing.JLabel();
         exit_button8 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1933,25 +1929,6 @@ public class SavedTournament0_UI extends javax.swing.JFrame {
 
         appLogo_img8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inAppLogo.png"))); // NOI18N
 
-        create_txt8.setFont(new java.awt.Font("Verdana", 2, 12)); // NOI18N
-        create_txt8.setForeground(new java.awt.Color(255, 102, 102));
-        create_txt8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        create_txt8.setText("CREATE:");
-
-        manage_txt8.setFont(new java.awt.Font("Verdana", 2, 12)); // NOI18N
-        manage_txt8.setForeground(new java.awt.Color(255, 102, 102));
-        manage_txt8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        manage_txt8.setText("BRACKET");
-
-        setting_txt8.setFont(new java.awt.Font("Verdana", 2, 12)); // NOI18N
-        setting_txt8.setForeground(new java.awt.Color(255, 102, 102));
-        setting_txt8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        setting_txt8.setText("SETTINGS:");
-
-        feedback_txt8.setFont(new java.awt.Font("Verdana", 2, 12)); // NOI18N
-        feedback_txt8.setForeground(new java.awt.Color(255, 102, 102));
-        feedback_txt8.setText("FEEDBACK:");
-
         exit_button8.setBackground(new java.awt.Color(255, 0, 0));
         exit_button8.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         exit_button8.setText("HOME");
@@ -1965,14 +1942,6 @@ public class SavedTournament0_UI extends javax.swing.JFrame {
         main_panel8.setLayout(main_panel8Layout);
         main_panel8Layout.setHorizontalGroup(
             main_panel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(main_panel8Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addGroup(main_panel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(feedback_txt8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(setting_txt8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(manage_txt8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(create_txt8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(exit_button8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, main_panel8Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1984,15 +1953,7 @@ public class SavedTournament0_UI extends javax.swing.JFrame {
             .addGroup(main_panel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(appLogo_img8, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(create_txt8)
-                .addGap(60, 60, 60)
-                .addComponent(manage_txt8)
-                .addGap(60, 60, 60)
-                .addComponent(setting_txt8)
-                .addGap(60, 60, 60)
-                .addComponent(feedback_txt8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 318, Short.MAX_VALUE)
                 .addComponent(exit_button8))
         );
 
@@ -2232,16 +2193,13 @@ public class SavedTournament0_UI extends javax.swing.JFrame {
     private javax.swing.JLabel appLogo_img8;
     private javax.swing.JScrollPane bracket_ScrollPane;
     private javax.swing.JButton confirm_button;
-    private javax.swing.JLabel create_txt8;
     private javax.swing.JButton exit_button8;
-    private javax.swing.JLabel feedback_txt8;
     private javax.swing.JPanel finals_panel;
     private javax.swing.JLabel finals_txt;
     private javax.swing.JPanel knockoutTournament_panel;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JTabbedPane mainTabbed;
     private javax.swing.JPanel main_panel8;
-    private javax.swing.JLabel manage_txt8;
     private javax.swing.JTextField participantLeftScore_txtField;
     private javax.swing.JLabel participantLeft_txt;
     private javax.swing.JTextField participantRightScore_txtField;
@@ -2257,7 +2215,6 @@ public class SavedTournament0_UI extends javax.swing.JFrame {
     private javax.swing.JLabel roundOf32_txt;
     private javax.swing.JPanel semiFinals_panel;
     private javax.swing.JLabel semiFinals_txt;
-    private javax.swing.JLabel setting_txt8;
     private javax.swing.JLabel winner;
     private javax.swing.JLabel winnerName_txt;
     private javax.swing.JLabel winner_txt;

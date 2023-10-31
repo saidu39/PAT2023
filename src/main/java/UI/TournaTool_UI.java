@@ -212,10 +212,6 @@ public class TournaTool_UI extends javax.swing.JFrame {
 
         main_panel = new javax.swing.JPanel();
         appLogo_img = new javax.swing.JLabel();
-        create_txt = new javax.swing.JLabel();
-        manage_txt = new javax.swing.JLabel();
-        setting_txt = new javax.swing.JLabel();
-        feedback_txt = new javax.swing.JLabel();
         exit_button = new javax.swing.JButton();
         mainTabbed = new javax.swing.JTabbedPane();
         create_panel = new javax.swing.JPanel();
@@ -263,25 +259,6 @@ public class TournaTool_UI extends javax.swing.JFrame {
 
         appLogo_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inAppLogo.png"))); // NOI18N
 
-        create_txt.setFont(new java.awt.Font("Verdana", 2, 12)); // NOI18N
-        create_txt.setForeground(new java.awt.Color(255, 102, 102));
-        create_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        create_txt.setText("CREATE:");
-
-        manage_txt.setFont(new java.awt.Font("Verdana", 2, 12)); // NOI18N
-        manage_txt.setForeground(new java.awt.Color(255, 102, 102));
-        manage_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        manage_txt.setText("MANAGE:");
-
-        setting_txt.setFont(new java.awt.Font("Verdana", 2, 12)); // NOI18N
-        setting_txt.setForeground(new java.awt.Color(255, 102, 102));
-        setting_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        setting_txt.setText("SETTINGS:");
-
-        feedback_txt.setFont(new java.awt.Font("Verdana", 2, 12)); // NOI18N
-        feedback_txt.setForeground(new java.awt.Color(255, 102, 102));
-        feedback_txt.setText("FEEDBACK:");
-
         exit_button.setBackground(new java.awt.Color(255, 0, 0));
         exit_button.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         exit_button.setText("EXIT");
@@ -295,14 +272,6 @@ public class TournaTool_UI extends javax.swing.JFrame {
         main_panel.setLayout(main_panelLayout);
         main_panelLayout.setHorizontalGroup(
             main_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(main_panelLayout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addGroup(main_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(feedback_txt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(setting_txt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(manage_txt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(create_txt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(exit_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, main_panelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -314,14 +283,6 @@ public class TournaTool_UI extends javax.swing.JFrame {
             .addGroup(main_panelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(appLogo_img, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(create_txt)
-                .addGap(60, 60, 60)
-                .addComponent(manage_txt)
-                .addGap(60, 60, 60)
-                .addComponent(setting_txt)
-                .addGap(60, 60, 60)
-                .addComponent(feedback_txt)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(exit_button))
         );
@@ -808,15 +769,12 @@ public class TournaTool_UI extends javax.swing.JFrame {
     private javax.swing.JLabel contact1_txt;
     private javax.swing.JButton continue_button;
     private javax.swing.JPanel create_panel;
-    private javax.swing.JLabel create_txt;
     private javax.swing.JLabel creator_txt;
     private javax.swing.JButton exit_button;
     private javax.swing.JPanel feedback_panel;
-    private javax.swing.JLabel feedback_txt;
     private javax.swing.JTabbedPane mainTabbed;
     private javax.swing.JPanel main_panel;
     private javax.swing.JPanel manage_panel;
-    private javax.swing.JLabel manage_txt;
     private javax.swing.JLabel maxParticipants_txt;
     private javax.swing.JLabel myEmail_txt;
     private javax.swing.JLabel myName_txt;
@@ -842,7 +800,6 @@ public class TournaTool_UI extends javax.swing.JFrame {
     private javax.swing.JLabel savedTournament6_image;
     private javax.swing.JButton savedTournament7_button;
     private javax.swing.JLabel savedTournament7_image;
-    private javax.swing.JLabel setting_txt;
     private javax.swing.JLabel title_txt;
     private javax.swing.JTextField title_txtField;
     // End of variables declaration//GEN-END:variables
