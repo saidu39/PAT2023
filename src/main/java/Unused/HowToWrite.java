@@ -1,7 +1,7 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
-
+ */
 package Unused;
 
 import BackEnd.ParticipantManager;
@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 /**
  *
  * @author saienn
-
+ */
 public class HowToWrite {
     public static void main(String[] args) {
         try {
@@ -22,4 +22,3 @@ public class HowToWrite {
         }
     }
 }
-*/
